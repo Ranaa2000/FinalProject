@@ -27,10 +27,10 @@ struct SignUpView: View {
                 .padding(.top,20)
             
             HStack{
-                Text("Don’t have an account? ").font(Font.headline).foregroundColor(.white).bold()
+                Text("Already have an account? ").font(Font.headline).foregroundColor(.white).bold()
                 NavigationLink( destination: Text("hhhhhhhhhhh"))
                 {
-                    Text("Sign Up").font(Font.system(size: 18)).bold()
+                    Text("Log in").font(Font.system(size: 18)).bold()
                 }
             }.padding(.top,40)
        
