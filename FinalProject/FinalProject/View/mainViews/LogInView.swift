@@ -10,7 +10,7 @@ import SwiftUI
 struct LogInView: View {
     @State var Password: String
     @State var Email: String
-    var f : String = "Enter your username/Gmail"
+    
     var body: some View {
         NavigationStack{ VStack {
             image()
