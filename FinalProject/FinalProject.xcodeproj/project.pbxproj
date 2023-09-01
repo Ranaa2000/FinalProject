@@ -14,9 +14,11 @@
 		30FBFAAA2AA0787500C23791 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FBFAA92AA0787500C23791 /* File.swift */; };
 		30FBFAB22AA0796700C23791 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FBFAB12AA0796700C23791 /* Color.swift */; };
 		30FBFAD22AA1045C00C23791 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FBFAD12AA1045C00C23791 /* LogInView.swift */; };
-		30FBFAD52AA104DB00C23791 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FBFAD42AA104DB00C23791 /* SwiftUIView.swift */; };
+		30FBFAD52AA104DB00C23791 /* CastomTextFild.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FBFAD42AA104DB00C23791 /* CastomTextFild.swift */; };
 		30FBFAD72AA1078300C23791 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FBFAD62AA1078300C23791 /* Image.swift */; };
 		30FBFAD92AA1087100C23791 /* textbuttum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FBFAD82AA1087100C23791 /* textbuttum.swift */; };
+		30FBFAE02AA28CC500C23791 /* textbuttunSignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FBFADF2AA28CC500C23791 /* textbuttunSignUp.swift */; };
+		30FBFAE32AA28D7A00C23791 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FBFAE22AA28D7A00C23791 /* SignUp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,9 +30,11 @@
 		30FBFAA92AA0787500C23791 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		30FBFAB12AA0796700C23791 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		30FBFAD12AA1045C00C23791 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
-		30FBFAD42AA104DB00C23791 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		30FBFAD42AA104DB00C23791 /* CastomTextFild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastomTextFild.swift; sourceTree = "<group>"; };
 		30FBFAD62AA1078300C23791 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		30FBFAD82AA1087100C23791 /* textbuttum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textbuttum.swift; sourceTree = "<group>"; };
+		30FBFADF2AA28CC500C23791 /* textbuttunSignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textbuttunSignUp.swift; sourceTree = "<group>"; };
+		30FBFAE22AA28D7A00C23791 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,7 @@
 		30FBFAAB2AA078CE00C23791 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				30FBFAE12AA28D5400C23791 /* AuthViews */,
 				30FBFAD02AA1043B00C23791 /* mainViews */,
 				30FBFA9D2AA0758E00C23791 /* ContentView.swift */,
 			);
@@ -95,6 +100,7 @@
 		30FBFAAC2AA078E200C23791 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				30FBFADE2AA28CA900C23791 /* SignUpViewCombon */,
 				30FBFAD32AA104BF00C23791 /* LogInViewCombon */,
 			);
 			path = ViewModel;
@@ -118,7 +124,6 @@
 		30FBFAD02AA1043B00C23791 /* mainViews */ = {
 			isa = PBXGroup;
 			children = (
-				30FBFAD12AA1045C00C23791 /* LogInView.swift */,
 			);
 			path = mainViews;
 			sourceTree = "<group>";
@@ -126,11 +131,28 @@
 		30FBFAD32AA104BF00C23791 /* LogInViewCombon */ = {
 			isa = PBXGroup;
 			children = (
-				30FBFAD42AA104DB00C23791 /* SwiftUIView.swift */,
+				30FBFAD42AA104DB00C23791 /* CastomTextFild.swift */,
 				30FBFAD62AA1078300C23791 /* Image.swift */,
 				30FBFAD82AA1087100C23791 /* textbuttum.swift */,
 			);
 			path = LogInViewCombon;
+			sourceTree = "<group>";
+		};
+		30FBFADE2AA28CA900C23791 /* SignUpViewCombon */ = {
+			isa = PBXGroup;
+			children = (
+				30FBFADF2AA28CC500C23791 /* textbuttunSignUp.swift */,
+			);
+			path = SignUpViewCombon;
+			sourceTree = "<group>";
+		};
+		30FBFAE12AA28D5400C23791 /* AuthViews */ = {
+			isa = PBXGroup;
+			children = (
+				30FBFAD12AA1045C00C23791 /* LogInView.swift */,
+				30FBFAE22AA28D7A00C23791 /* SignUp.swift */,
+			);
+			path = AuthViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,10 +229,12 @@
 				30FBFAD92AA1087100C23791 /* textbuttum.swift in Sources */,
 				30FBFA9E2AA0758E00C23791 /* ContentView.swift in Sources */,
 				30FBFAB22AA0796700C23791 /* Color.swift in Sources */,
-				30FBFAD52AA104DB00C23791 /* SwiftUIView.swift in Sources */,
+				30FBFAD52AA104DB00C23791 /* CastomTextFild.swift in Sources */,
+				30FBFAE02AA28CC500C23791 /* textbuttunSignUp.swift in Sources */,
 				30FBFAAA2AA0787500C23791 /* File.swift in Sources */,
 				30FBFA9C2AA0758E00C23791 /* FinalProjectApp.swift in Sources */,
 				30FBFAD22AA1045C00C23791 /* LogInView.swift in Sources */,
+				30FBFAE32AA28D7A00C23791 /* SignUp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
