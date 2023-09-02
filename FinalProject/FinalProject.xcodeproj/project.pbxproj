@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30DD8EB32AA3EEF000522586 /* RiveRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = 30DD8EB22AA3EEF000522586 /* RiveRuntime */; };
+		30DD8EB52AA3EF5700522586 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DD8EB42AA3EF5700522586 /* WelcomeView.swift */; };
+		30DD8EBF2AA3F0BA00522586 /* 113-173-loading-book.riv in Resources */ = {isa = PBXBuildFile; fileRef = 30DD8EBE2AA3F0BA00522586 /* 113-173-loading-book.riv */; };
 		30FBFA9C2AA0758E00C23791 /* FinalProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FBFA9B2AA0758E00C23791 /* FinalProjectApp.swift */; };
 		30FBFA9E2AA0758E00C23791 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FBFA9D2AA0758E00C23791 /* ContentView.swift */; };
 		30FBFAA02AA0759000C23791 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30FBFA9F2AA0759000C23791 /* Assets.xcassets */; };
@@ -22,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		30DD8EB42AA3EF5700522586 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		30DD8EBE2AA3F0BA00522586 /* 113-173-loading-book.riv */ = {isa = PBXFileReference; lastKnownFileType = file; name = "113-173-loading-book.riv"; path = "../../../../../Downloads/113-173-loading-book.riv"; sourceTree = "<group>"; };
 		30FBFA982AA0758E00C23791 /* FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30FBFA9B2AA0758E00C23791 /* FinalProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalProjectApp.swift; sourceTree = "<group>"; };
 		30FBFA9D2AA0758E00C23791 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -42,12 +47,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30DD8EB32AA3EEF000522586 /* RiveRuntime in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30DD8EBD2AA3F05000522586 /* Rive */ = {
+			isa = PBXGroup;
+			children = (
+				30DD8EBE2AA3F0BA00522586 /* 113-173-loading-book.riv */,
+			);
+			path = Rive;
+			sourceTree = "<group>";
+		};
 		30FBFA8F2AA0758E00C23791 = {
 			isa = PBXGroup;
 			children = (
@@ -67,6 +81,7 @@
 		30FBFA9A2AA0758E00C23791 /* FinalProject */ = {
 			isa = PBXGroup;
 			children = (
+				30DD8EBD2AA3F05000522586 /* Rive */,
 				30FBFAAF2AA0791300C23791 /* Services */,
 				30FBFAAE2AA0790800C23791 /* Model */,
 				30FBFAAC2AA078E200C23791 /* ViewModel */,
@@ -93,6 +108,7 @@
 				30FBFAE12AA28D5400C23791 /* AuthViews */,
 				30FBFAD02AA1043B00C23791 /* mainViews */,
 				30FBFA9D2AA0758E00C23791 /* ContentView.swift */,
+				30DD8EB42AA3EF5700522586 /* WelcomeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -171,6 +187,9 @@
 			dependencies = (
 			);
 			name = FinalProject;
+			packageProductDependencies = (
+				30DD8EB22AA3EEF000522586 /* RiveRuntime */,
+			);
 			productName = FinalProject;
 			productReference = 30FBFA982AA0758E00C23791 /* FinalProject.app */;
 			productType = "com.apple.product-type.application";
@@ -199,6 +218,9 @@
 				Base,
 			);
 			mainGroup = 30FBFA8F2AA0758E00C23791;
+			packageReferences = (
+				30DD8EB12AA3EEF000522586 /* XCRemoteSwiftPackageReference "rive-ios" */,
+			);
 			productRefGroup = 30FBFA992AA0758E00C23791 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -213,6 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30DD8EBF2AA3F0BA00522586 /* 113-173-loading-book.riv in Resources */,
 				30FBFAA32AA0759100C23791 /* Preview Assets.xcassets in Resources */,
 				30FBFAA02AA0759000C23791 /* Assets.xcassets in Resources */,
 			);
@@ -231,6 +254,7 @@
 				30FBFAB22AA0796700C23791 /* Color.swift in Sources */,
 				30FBFAD52AA104DB00C23791 /* CastomTextFild.swift in Sources */,
 				30FBFAE02AA28CC500C23791 /* textbuttunSignUp.swift in Sources */,
+				30DD8EB52AA3EF5700522586 /* WelcomeView.swift in Sources */,
 				30FBFAAA2AA0787500C23791 /* File.swift in Sources */,
 				30FBFA9C2AA0758E00C23791 /* FinalProjectApp.swift in Sources */,
 				30FBFAD22AA1045C00C23791 /* LogInView.swift in Sources */,
@@ -433,6 +457,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		30DD8EB12AA3EEF000522586 /* XCRemoteSwiftPackageReference "rive-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rive-app/rive-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		30DD8EB22AA3EEF000522586 /* RiveRuntime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 30DD8EB12AA3EEF000522586 /* XCRemoteSwiftPackageReference "rive-ios" */;
+			productName = RiveRuntime;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 30FBFA902AA0758E00C23791 /* Project object */;
 }
