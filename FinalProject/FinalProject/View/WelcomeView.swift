@@ -36,18 +36,7 @@ struct WelcomeView: View {
                 }.padding(.bottom,5)
             }
         }
-            //.background(Color.init(red: 0.75,green: 0.75,blue: 0.76)
-            
-            
-            
-            
-           
-      
-           
-            
-          
-            
-            
+   
         }.frame(maxWidth: .infinity,maxHeight: .infinity).background( Image("backgrawnd").resizable().edgesIgnoringSafeArea(.all))
 
     }

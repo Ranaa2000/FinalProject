@@ -11,51 +11,51 @@ struct cardsDetails: View {
     var image:String = "a2"
     var titil:String = "Book Tiltle"
     var body: some View {
-       
+        
+        
+        
+        
+        VStack{
             
-                            
-                       
-                        NavigationLink {
-                           ShowDetailsView()
-                        } label: {
-                            ZStack{
-                                Rectangle()
-                                    .frame(width: 170, height: 340)
-                                    .foregroundColor(Color.gray.opacity(0.6))
-                                VStack{
-                                    Image(image)
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fit)
-                                        .frame(width: 150)
-                                        .cornerRadius(2)
-                                        .padding()
-                                    VStack(){
-                                        
-                                        Text(titil)
-                                            .font(
-                                                Font.custom("Crimson Text", size: 20)
-                                                    .weight(.bold)
-                                            )
-                                        
-                                            .foregroundColor(.black)
-                                            .frame(width: 174, height: 26)
-                                        
-                                    }
-                                    
+            NavigationLink {
+                ShowDetailsView()
+            } label: {
+                VStack{
+                    VStack {
+                        Image(image).resizable().frame(width: 140,height: 175)
+                        HStack{
+                            Text(titil)
+                                Spacer()
+                        }.frame(width: 135,height: 20)
+                        HStack{
+                            VStack{
+                                
+                                
+                                HStack{
+                                    Text("bisnis ")
+                                    Spacer()
+                                  
+                                }
+                                HStack{
+                                    Text("Riyadh ")
+                                    Spacer()
                                 }
                                 
-                            }
-                            
-                            
-                            
-                    }
-                
-           
-       
-        
-        
-    }
-}
+                            }.frame(width: 104)
+                            Image(systemName: "heart").resizable().frame(width: 25,height: 23)
+                        }
+                    }.frame(width: 140)
+                        .padding(10)
+                }.background(Color.white).cornerRadius(20)
+            
+            }.foregroundColor(.black)
+            
+            
+            
+            
+            
+        }
+    }}
 
 struct SwiftUIViewsedrftgyhu_Previews: PreviewProvider {
     static var previews: some View {
