@@ -13,6 +13,7 @@
 		2B24952A2AA4A60E009DC9C1 /* ListOfCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2495292AA4A60E009DC9C1 /* ListOfCards.swift */; };
 		2B24952C2AA4A68F009DC9C1 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B24952B2AA4A68F009DC9C1 /* SearchView.swift */; };
 		309FABE52AA518B900102B56 /* 113-173-loading-book.riv in Resources */ = {isa = PBXBuildFile; fileRef = 309FABE42AA518B900102B56 /* 113-173-loading-book.riv */; };
+		309FABE72AA5C28D00102B56 /* Fivoret.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309FABE62AA5C28D00102B56 /* Fivoret.swift */; };
 		30DD8EB32AA3EEF000522586 /* RiveRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = 30DD8EB22AA3EEF000522586 /* RiveRuntime */; };
 		30DD8EB52AA3EF5700522586 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DD8EB42AA3EF5700522586 /* WelcomeView.swift */; };
 		30FBFA9C2AA0758E00C23791 /* FinalProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FBFA9B2AA0758E00C23791 /* FinalProjectApp.swift */; };
@@ -36,6 +37,7 @@
 		2B2495292AA4A60E009DC9C1 /* ListOfCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfCards.swift; sourceTree = "<group>"; };
 		2B24952B2AA4A68F009DC9C1 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchView.swift; path = FinalProject/HomeDetailsView/SearchView.swift; sourceTree = SOURCE_ROOT; };
 		309FABE42AA518B900102B56 /* 113-173-loading-book.riv */ = {isa = PBXFileReference; lastKnownFileType = file; name = "113-173-loading-book.riv"; path = "../../../../../Downloads/113-173-loading-book.riv"; sourceTree = "<group>"; };
+		309FABE62AA5C28D00102B56 /* Fivoret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fivoret.swift; sourceTree = "<group>"; };
 		30DD8EB42AA3EF5700522586 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		30FBFA982AA0758E00C23791 /* FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30FBFA9B2AA0758E00C23791 /* FinalProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalProjectApp.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				30FBFAD02AA1043B00C23791 /* mainViews */,
 				30FBFA9D2AA0758E00C23791 /* ContentView.swift */,
 				30DD8EB42AA3EF5700522586 /* WelcomeView.swift */,
+				309FABE62AA5C28D00102B56 /* Fivoret.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				30DD8EB52AA3EF5700522586 /* WelcomeView.swift in Sources */,
 				2B24952A2AA4A60E009DC9C1 /* ListOfCards.swift in Sources */,
 				30FBFAAA2AA0787500C23791 /* File.swift in Sources */,
+				309FABE72AA5C28D00102B56 /* Fivoret.swift in Sources */,
 				30FBFA9C2AA0758E00C23791 /* FinalProjectApp.swift in Sources */,
 				2B2495232AA4A526009DC9C1 /* HomeView.swift in Sources */,
 				2B24952C2AA4A68F009DC9C1 /* SearchView.swift in Sources */,
