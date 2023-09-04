@@ -33,9 +33,9 @@ struct TabdView: View {
                 .toolbar(.visible, for: .tabBar)
                 .toolbarBackground(Color("blueC") ,for: .tabBar)
             
-            SearchView()
+            FavoriteView()
                 .tabItem {
-                    Label("Post", systemImage: "heart")
+                    Label("Favorite", systemImage: "heart")
                 }
                 .toolbar(.visible, for: .tabBar)
                 .toolbarBackground(Color("blueC") ,for: .tabBar)
