@@ -16,6 +16,7 @@ struct TabdView: View {
                     Label("Home", systemImage: "house")
                 }
             
+            
                 .toolbar(.visible, for: .tabBar)
                 .toolbarBackground(Color("blueC") ,for: .tabBar)
             SearchView()
