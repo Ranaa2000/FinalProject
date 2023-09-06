@@ -12,13 +12,6 @@ struct HomeView: View {
     var body: some View {
         NavigationView{
             VStack{
-                Text("Home").padding(.top, 66)
-                    .font(
-                        Font.custom("Crimson Text", size: 40)
-                            .weight(.bold)
-                    )
-                    .foregroundColor(.white)
-                    .frame(width: 183, height: 65, alignment: .topLeading)
                 Text("")
                     .padding(.bottom, 66)
                 ScrollView(.horizontal){
@@ -41,11 +34,6 @@ struct HomeView: View {
                             Image("Rectangle 100")
                                 .frame(width: 120,height: 33)
                                 .background(.white)
-                            // تصنيف الكتب بحسب نوع الكتاب
-                            // في وصف الكتاب في بوست يدخل المستخدم تصنيف الكتاب مثل (ثقافي ، تعليمي ، ترفيه  ، روايات ، اخ
-                            
-                            
-                            
                             
                             Text("Educational")
                                 .font(
@@ -87,7 +75,8 @@ struct HomeView: View {
                         }
                         .cornerRadius(9)
                         
-                    }
+                    }.padding()
+                        .padding()
                     
                 }
                 //ScrollView(showsIndicators: false)
@@ -116,15 +105,10 @@ struct HomeView: View {
             .toolbar(){ // <2>
                 ToolbarItem() { // <3>
                     HStack{
-                        
-                        
-                       
-                        
-                       
-                        
-                        Text("Favorite")
+                        Text("Home")
                             .foregroundColor(.white)
                             .font(.system(size: 40))
+
                             .bold()
                        
                         
