@@ -7,7 +7,7 @@
 
 
 import SwiftUI
-import RiveRuntime
+
 
 var iatems:Array<Dictionary> = [
     [

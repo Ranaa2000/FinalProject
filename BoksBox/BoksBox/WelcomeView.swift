@@ -8,7 +8,8 @@
 
 
 import SwiftUI
-import RiveRuntime
+
+
 
 
 struct WelcomeView: View {
