@@ -42,7 +42,11 @@ struct cardsDetails: View {
                                 }
                                 
                             }.frame(width: 104)
-                            Image(systemName: "heart").resizable().frame(width: 25,height: 23)
+                            Button(action: {
+                                Vm().vm(newbook: Bookmodel(titel: titil,image: image))
+                            }, label: {
+                                Image(systemName: "heart").resizable().frame(width: 25,height: 23)
+                            })
                         }
                     }.frame(width: 140)
                         .padding(10)

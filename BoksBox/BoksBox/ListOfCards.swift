@@ -6,32 +6,7 @@
 //
 
 import SwiftUI
-var items:Array<Dictionary> = [
-    [
-        "image":"a2",
-        "name":"Book1"
-    ],
-    [
-        "image":"a3",
-        "name":"Book2"
-    ],
-    [
-        "image":"a1",
-        "name":"Book 3"
-    ],
-    [
-        "image":"a1",
-        "name":"Book 4"
-    ],
-    [
-        "image":"a1",
-        "name":"Book 5"
-    ],
-    [
-        "image":"a1",
-        "name":"Book 6"
-    ]
-]
+var list  =  arr
 
 var text:Array<String> = ["a1"," a1"]
 
@@ -45,9 +20,9 @@ struct ListOfCards: View {
     var body: some View {
         ScrollView(){
             LazyVGrid(columns: columns, spacing: 10) {
-                ForEach(items, id: \.self) { item in
-                    cardsDetails(image: item["image"] ?? "a1"
-                                 ,titil: item["name"] ?? "a1"
+                ForEach(list, id: \.self) { item in
+                    cardsDetails(image: item.image
+                                 ,titil: item.titel
                     )
                 }
             }

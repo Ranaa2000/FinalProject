@@ -11,7 +11,7 @@ import SwiftUI
 struct BoksBoxApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabdView()
         }
     }
 }
