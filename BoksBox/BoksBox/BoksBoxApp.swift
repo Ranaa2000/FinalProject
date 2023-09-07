@@ -9,9 +9,17 @@ import SwiftUI
 
 @main
 struct BoksBoxApp: App {
+//    init() {
+//        FirebaseApp.configure()
+//    }
+    @ObservedObject var vm = Vm()
+    
     var body: some Scene {
         WindowGroup {
-            TabdView()
+         
+                WelcomeView()
+                    .environmentObject(vm)
+            
         }
     }
 }

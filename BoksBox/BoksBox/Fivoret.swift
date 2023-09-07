@@ -9,36 +9,11 @@
 import SwiftUI
 
 
-var iatems:Array<Dictionary> = [
-    [
-        "image":"a2",
-        "name":"Book1"
-    ],
-    [
-        "image":"a3",
-        "name":"Book2"
-    ],
-    [
-        "image":"a1",
-        "name":"Book 3"
-    ],
-    [
-        "image":"a1",
-        "name":"Book 4"
-    ],
-    [
-        "image":"a1",
-        "name":"Book 5"
-    ],
-    [
-        "image":"a1",
-        "name":"Book 6"
-    ]
-]
-
 var texwt:Array<String> = ["a1"," a1"]
 
 struct FavoriteView: View {
+    @EnvironmentObject var vm: Vm
+
     let columns = [
         GridItem(.flexible()),
         GridItem(.flexible())
@@ -54,18 +29,18 @@ struct FavoriteView: View {
                 
                 ScrollView(){
                     LazyVGrid(columns: columns, spacing: 10) {
-                        ForEach(iatems, id: \.self) { item in
-                            cardsDetails(image: item["image"] ?? "a1"
-                                         ,titil: item["name"] ?? "a1"
-                            )
+                        ForEach(vm.arr, id: \.self) { item in
+                            cardsDetails(image: item.image,
+                                         titil: item.titel,
+                                         icon:"heart.fill")
+                        }.onDelete { (indexSet) in
+                            self.vm.arr.remove(atOffsets: indexSet)
+                            }
                         }
                     }
                     .padding(.horizontal).padding(.top,110)
                 }
-                
-                
-                
-                
+                            
                 
             }.frame(maxWidth: .infinity,maxHeight: .infinity).background(LinearGradient(
                 stops: [
@@ -78,12 +53,7 @@ struct FavoriteView: View {
                 .toolbar { // <2>
                     ToolbarItem() { // <3>
                         HStack{
-                            
-                            
-                           
-                            
-                           
-                            
+                        
                             Text("Favorite")
                                 .foregroundColor(.white)
                                 .font(.system(size: 40))
@@ -110,7 +80,7 @@ struct FavoriteView: View {
                 }
 
         }    }
-}
+
 
 struct FavoriteView_Previews: PreviewProvider {
     static var previews: some View {

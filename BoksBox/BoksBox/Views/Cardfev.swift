@@ -1,19 +1,22 @@
 //
-//  CardDetails .swift
-//  FinalProject
+//  Cardfev.swift
+//  BoksBox
 //
-//  Created by Rana MHD on 18/02/1445 AH.
+//  Created by الوليد خشيم on 22/02/1445 AH.
 //
 
 import SwiftUI
 
-struct cardsDetails: View {
+struct Cardfev: View {
     @EnvironmentObject var vm: Vm
     var image:String = "a2"
     var titil:String = "Book Tiltle"
     var icon:String = "heart"
     var body: some View {
-                
+        
+        
+        
+        
         VStack{
             
             NavigationLink {
@@ -61,8 +64,8 @@ struct cardsDetails: View {
         }
     }}
 
-struct SwiftUIViewsedrftgyhu_Previews: PreviewProvider {
+struct Cardfev_Previews: PreviewProvider {
     static var previews: some View {
-        cardsDetails()
+        Cardfev()
     }
 }

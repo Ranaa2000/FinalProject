@@ -6,13 +6,14 @@
 //
 
 import SwiftUI
+//import FirebaseAuth
 
 struct SignUpView: View {
     @State var Enteryourname: String = "ger"
-    @State var Email: String
-    @State var Password: String
-    @State var PasswordCorint: String
-    @State var Username: String
+    @State var Email: String = ""
+    @State var Password: String = ""
+    @State var PasswordCorint: String = ""
+    @State var Username: String = ""
     var f : String = "Enter your username/Gmail"
     var body: some View {
         NavigationStack{ VStack {
@@ -28,7 +29,7 @@ struct SignUpView: View {
             
             HStack{
                 Text("Already have an account? ").font(Font.headline).foregroundColor(.white).bold()
-                NavigationLink( destination: Text("hhhhhhhhhhh"))
+                NavigationLink( destination: LogInView())
                 {
                     Text("Log in").font(Font.system(size: 18)).bold()
                 }
@@ -45,6 +46,18 @@ struct SignUpView: View {
         ))
         .padding()
     }}
+//    func createUser(username:String,Password:String){
+//        Auth.auth().createUser(withEmail: username, password: Password){ok,erorr
+//            in
+//            if erorr == nil {
+//                
+//                boolpage = true
+//                print(" ok")
+//            }else
+//            {
+//                texteror = Text("Sorry, the password or email is incorrect")
+//                print("nit ok")
+//            }}}
 }
 
 struct SignUpView_Previews: PreviewProvider {

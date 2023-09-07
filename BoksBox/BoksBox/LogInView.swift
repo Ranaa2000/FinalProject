@@ -6,10 +6,11 @@
 //
 
 import SwiftUI
+//import FirebaseAuth
 
 struct LogInView: View {
-    @State var Password: String
-    @State var Email: String
+    @State var Password: String = ""
+    @State var Email: String = ""
     
     var body: some View {
         NavigationStack{ VStack {
@@ -17,13 +18,16 @@ struct LogInView: View {
             CastomTextFild(Controlir: Email, text: "Enter your username/Gmail").padding(.bottom)
             CastomTextFild(Controlir: Password, text: "Password")
             
-            Button {}
+            Button {
+                //signIn(username: Email, Password: Password)
+                
+            }
         label: {textbuttun()}
                 .padding(.top,40)
             
             HStack{
                 Text("Don’t have an account? ").font(Font.headline).foregroundColor(.white).bold()
-                NavigationLink( destination: Text("hhhhhhhhhhh"))
+                NavigationLink( destination: SignUpView())
                 {
                     Text("Sign Up").font(Font.system(size: 18)).bold()
                 }
@@ -31,6 +35,22 @@ struct LogInView: View {
         }.frame(width: 400,height: 900).background(Colors().Backgroundcolor)
                 .padding()
         }}
+//    func signIn(username:String,Password:String){
+//        Auth.auth().signIn(withEmail: username, password: Password){ok,erorr
+//            in
+//            if erorr == nil {
+//                Gwt().Token = "token"
+//                boolpage = true
+//                print(" ok")
+//            }else
+//            {
+//                texteror = Text("Sorry, the password or email is incorrect")
+//                print("nit ok")
+//            }
+//
+//        }
+//    }
+
 }
 struct LogInView_Previews: PreviewProvider {
     static var previews: some View {
