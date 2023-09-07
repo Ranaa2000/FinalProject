@@ -33,6 +33,9 @@
 		3090DD722AA8C7800088C89E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3090DD712AA8C7800088C89E /* ContentView.swift */; };
 		3090DD742AA8C7820088C89E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3090DD732AA8C7820088C89E /* Assets.xcassets */; };
 		3090DD772AA8C7820088C89E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3090DD762AA8C7820088C89E /* Preview Assets.xcassets */; };
+		FAFE77BB2AA9E20F00F81EA7 /* NewPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFE77BA2AA9E20F00F81EA7 /* NewPost.swift */; };
+		FAFE77BD2AA9E32100F81EA7 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFE77BC2AA9E32100F81EA7 /* Profile.swift */; };
+		FAFE77BF2AA9E36E00F81EA7 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFE77BE2AA9E36E00F81EA7 /* SettingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +66,9 @@
 		3090DD712AA8C7800088C89E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3090DD732AA8C7820088C89E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3090DD762AA8C7820088C89E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FAFE77BA2AA9E20F00F81EA7 /* NewPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPost.swift; sourceTree = "<group>"; };
+		FAFE77BC2AA9E32100F81EA7 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		FAFE77BE2AA9E36E00F81EA7 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,7 +131,10 @@
 				305371912AA909AE00C4DA01 /* ViewModel */,
 				305371902AA909A200C4DA01 /* Views */,
 				3074987A2AA8F902006C6E43 /* CardDetails .swift */,
+				FAFE77BA2AA9E20F00F81EA7 /* NewPost.swift */,
+				FAFE77BC2AA9E32100F81EA7 /* Profile.swift */,
 				307498702AA8F902006C6E43 /* CastomTextFild.swift */,
+				FAFE77BE2AA9E36E00F81EA7 /* SettingView.swift */,
 				307498782AA8F902006C6E43 /* Color.swift */,
 				307498762AA8F902006C6E43 /* File.swift */,
 				307498792AA8F902006C6E43 /* FinalProjectApp.swift */,
@@ -230,6 +239,7 @@
 				307498862AA8F903006C6E43 /* LogInView.swift in Sources */,
 				307498892AA8F903006C6E43 /* ShowDetailsView.swift in Sources */,
 				307498882AA8F903006C6E43 /* File.swift in Sources */,
+				FAFE77BD2AA9E32100F81EA7 /* Profile.swift in Sources */,
 				307498902AA8F903006C6E43 /* Fivoret.swift in Sources */,
 				307498832AA8F902006C6E43 /* SignUp.swift in Sources */,
 				307498812AA8F902006C6E43 /* SearchView.swift in Sources */,
@@ -247,8 +257,10 @@
 				305371942AA909E000C4DA01 /* Model.swift in Sources */,
 				305371962AA90C5400C4DA01 /* vm.swift in Sources */,
 				3074988C2AA8F903006C6E43 /* CardDetails .swift in Sources */,
+				FAFE77BF2AA9E36E00F81EA7 /* SettingView.swift in Sources */,
 				3074988E2AA8F903006C6E43 /* textbuttum.swift in Sources */,
 				307498852AA8F903006C6E43 /* TabView.swift in Sources */,
+				FAFE77BB2AA9E20F00F81EA7 /* NewPost.swift in Sources */,
 				3053719A2AA9C2FE00C4DA01 /* ShicToken.swift in Sources */,
 				307498802AA8F902006C6E43 /* WelcomeView.swift in Sources */,
 			);
