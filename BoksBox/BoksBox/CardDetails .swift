@@ -6,44 +6,44 @@
 //
 
 import SwiftUI
+import FirebaseStorage
 
-struct cardsDetails: View {
+struct CardDetails: View {
     @EnvironmentObject var vm: Vm
-    var image:String = "a2"
-    var titil:String = "Book Tiltle"
-    var icon:String = "heart"
+    let storageRef = Storage.storage().reference()
+    @State var item: BookItem
+    var icon: String = "heart"
+    
+    @State var imageUrl: URL = URL(string: "https://placehold.co/400")!
+
     var body: some View {
-                
         VStack{
-            
             NavigationLink {
                 ShowDetailsView()
             } label: {
                 VStack{
                     VStack {
-                        Image(image).resizable().frame(width: 140,height: 175)
+                        AsyncImage(url: imageUrl)
+                            .frame(width: 140, height: 175)
                         HStack{
-                            Text(titil)
-                                Spacer()
-                        }.frame(width: 135,height: 20)
+                            Text(item.title)
+                            Spacer()
+                        }.frame(width: 135, height: 20)
                         HStack{
                             VStack{
-                                
-                                
                                 HStack{
-                                    Text("bisnis ")
+                                    Text(item.author)
                                     Spacer()
-                                  
+                                    
                                 }
                                 HStack{
-                                    Text("Riyadh ")
+                                    Text(item.country)
                                     Spacer()
                                 }
                                 
                             }.frame(width: 104)
                             Button(action: {
-                                
-                                vm.vm(newbook: Bookmodel(titel: titil,image: image,icon: "heart.fill"))
+                                vm.vm(newbook: item)
                             }, label: {
                                 Image(systemName: icon).resizable().frame(width: 25,height: 23)
                             })
@@ -51,7 +51,7 @@ struct cardsDetails: View {
                     }.frame(width: 140)
                         .padding(10)
                 }.background(Color.white).cornerRadius(20)
-            
+                
             }.foregroundColor(.black)
             
             
@@ -59,10 +59,18 @@ struct cardsDetails: View {
             
             
         }
-    }}
-
-struct SwiftUIViewsedrftgyhu_Previews: PreviewProvider {
-    static var previews: some View {
-        cardsDetails()
+        .onAppear() {
+            let path = storageRef.child(item.imageName)
+            // Fetch the download URL
+            path.downloadURL { url, error in
+                if let error = error {
+                    print("\(item.imageName) not found")
+                    print(error)
+                }
+                if let url = url {
+                    imageUrl = url
+                }
+            }
+        }
     }
 }

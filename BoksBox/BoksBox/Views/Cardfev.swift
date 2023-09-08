@@ -46,7 +46,7 @@ struct Cardfev: View {
                             }.frame(width: 104)
                             Button(action: {
                                 
-                                vm.vm(newbook: Bookmodel(titel: titil,image: image,icon: "heart.fill"))
+                                //vm.vm(newbook: Bookmodel(titel: titil,image: image,icon: "heart.fill"))
                             }, label: {
                                 Image(systemName: icon).resizable().frame(width: 25,height: 23)
                             })

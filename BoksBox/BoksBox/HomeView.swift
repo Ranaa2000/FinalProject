@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct HomeView: View {
-    
+
     var body: some View {
-        NavigationView{
+        NavigationView {
             VStack{
                 Text("")
                     .padding(.bottom, 66)
@@ -108,21 +108,17 @@ struct HomeView: View {
                         Text("Home")
                             .foregroundColor(.white)
                             .font(.system(size: 40))
-
+                        
                             .bold()
-                       
-                       
-                       
+                        
+                        
+                        
                     }.frame(width: 380)
                     
                     
                 }
             }
         }
-    }
-}
-struct HomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeView()
+        
     }
 }

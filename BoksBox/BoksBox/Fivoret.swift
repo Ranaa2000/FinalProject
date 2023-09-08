@@ -30,8 +30,7 @@ struct FavoriteView: View {
                 ScrollView(){
                     LazyVGrid(columns: columns, spacing: 10) {
                         ForEach(vm.arr, id: \.self) { item in
-                            cardsDetails(image: item.image,
-                                         titil: item.titel,
+                            CardDetails(item: item,
                                          icon:"heart.fill")
                         }.onDelete { (indexSet) in
                             self.vm.arr.remove(atOffsets: indexSet)

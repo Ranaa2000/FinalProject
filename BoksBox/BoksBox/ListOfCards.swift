@@ -6,12 +6,15 @@
 //
 
 import SwiftUI
-
+import FirebaseDatabase
 
 var text:Array<String> = ["a1"," a1"]
 
 struct ListOfCards: View {
     @EnvironmentObject var vm: Vm
+    let ref = Database.database().reference(withPath: "books")
+    @State var refObservers: [DatabaseHandle] = []
+    @State var items: [BookItem] = []
     
     let columns = [
         GridItem(.flexible()),
@@ -22,21 +25,27 @@ struct ListOfCards: View {
     var body: some View {
         ScrollView(){
             LazyVGrid(columns: columns, spacing: 10) {
-                ForEach(vm.home, id: \.self) { item in
-                    cardsDetails(image: item.image
-                                 ,titil: item.titel
-                    )
+                ForEach(self.items, id: \.self) { item in
+                    CardDetails(item: item)
                 }
             }
             .padding(.horizontal)
         }
-        
+        .onAppear() {
+            let completed = ref
+                .observe(.value) { snapshot in
+                    var newItems: [BookItem] = []
+                    for child in snapshot.children {
+                        if
+                            let snapshot = child as? DataSnapshot,
+                            let bookItem = BookItem(snapshot: snapshot) {
+                            newItems.append(bookItem)
+                        }
+                    }
+                    self.items = newItems
+                }
+            refObservers.append(completed)
+        }
     }
     
-}
-
-struct ListOfCards_Previews: PreviewProvider {
-    static var previews: some View {
-        ListOfCards()
-    }
 }
