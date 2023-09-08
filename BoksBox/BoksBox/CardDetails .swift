@@ -24,6 +24,7 @@ struct CardDetails: View {
                 VStack{
                     VStack {
                         AsyncImage(url: imageUrl)
+                        
                             .frame(width: 140, height: 175)
                         HStack{
                             Text(item.title)
@@ -45,7 +46,7 @@ struct CardDetails: View {
                             Button(action: {
                                 vm.vm(newbook: item)
                             }, label: {
-                                Image(systemName: icon).resizable().frame(width: 25,height: 23)
+                                Image(systemName: icon).resizable().foregroundColor(.red).frame(width: 25,height: 23)
                             })
                         }
                     }.frame(width: 140)

@@ -5,6 +5,8 @@
 //  Created by الوليد خشيم on 22/02/1445 AH.
 //
 
+
+
 import SwiftUI
 
 struct Cardfev: View {
@@ -46,9 +48,9 @@ struct Cardfev: View {
                             }.frame(width: 104)
                             Button(action: {
                                 
-                                //vm.vm(newbook: Bookmodel(titel: titil,image: image,icon: "heart.fill"))
+//                                vm.vm(newbook: Bookmodel(titel: titil,image: image,icon: "heart.fill"))
                             }, label: {
-                                Image(systemName: icon).resizable().frame(width: 25,height: 23)
+                                Image(systemName: icon).resizable().foregroundColor(.red).frame(width: 25,height: 23)
                             })
                         }
                     }.frame(width: 140)
@@ -69,3 +71,5 @@ struct Cardfev_Previews: PreviewProvider {
         Cardfev()
     }
 }
+
+

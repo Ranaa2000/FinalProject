@@ -58,18 +58,7 @@ struct FavoriteView: View {
                                 .font(.system(size: 40))
                                 .bold()
                            
-                            
-                     
-        //                            Button(action: {
-        //                                //print("waleed")
-        //                               // SettingView()
-        //                            }, label: {
-        //                                Image(systemName: "gearshape.2").resizable()
-        //
-        //                                        .frame(width: 35,height: 35)
-        //                                        .foregroundColor(.white)
-        //
-        //                            })
+                
                           
                            
                         }.frame(width: 380)
