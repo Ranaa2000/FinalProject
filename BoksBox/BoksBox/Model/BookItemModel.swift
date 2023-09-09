@@ -19,7 +19,6 @@ struct BookItem: Hashable {
     var pages: Int
     var title: String
     var year: Int
-    var imageUrl: URL = URL(string: "https://placehold.co/400")!
 
     // json key to object attribute mapping
     var dictionary: [String: Any] {
@@ -33,6 +32,19 @@ struct BookItem: Hashable {
             "title": title,
             "year": year
         ]
+    }
+    
+    // MARK: empty initializer
+    init() {
+        self.ref = nil
+        self.author = ""
+        self.country = ""
+        self.imageName = ""
+        self.language = ""
+        self.link = ""
+        self.pages = 0
+        self.title = ""
+        self.year = 1990
     }
     
     // MARK: To initialize Book Item object from JSON string

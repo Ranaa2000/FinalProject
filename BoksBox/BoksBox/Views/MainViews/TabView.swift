@@ -15,12 +15,6 @@ struct TabdView: View {
                 .tabItem {
                     Label("Home", systemImage: "house")
                 }
-
-            
-            
-            
-            
-            
                 .toolbar(.visible, for: .tabBar)
                 .toolbarBackground(Color("blueC") ,for: .tabBar)
             SearchView()
@@ -31,7 +25,7 @@ struct TabdView: View {
                 .toolbarBackground(Color("blueC") ,for: .tabBar)
             
             // change the name into the the view name
-            SearchView()
+            NewPost()
                 .tabItem {
                     Label("Post", systemImage: "plus")
                 }

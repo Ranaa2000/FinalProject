@@ -9,6 +9,7 @@
 
 import SwiftUI
 import UIKit
+
 var te:String = "choose an image"
 
 struct PlaceholderTextField: View {
@@ -36,272 +37,186 @@ struct PlaceholderTextField: View {
     }
 }
 
-
 struct NewPost: View {
     @State private var selectedImage: UIImage?
     @State private var isShowingImagePicker = false
     
-    @State private var textField1 = ""
-    @State private var textField2 = ""
-    @State private var textField3 = ""
-    @State private var textField4 = ""
-    @State private var textField5 = ""
+    @State private var pagesText = ""
+    @State private var yearText = ""
+    @State private var item: BookItem = BookItem()
+    @EnvironmentObject var bookItems: BookItemsViewModel
     
     let bookClassifications = ["Educational" , "Cultural" ,"Novel" ,"Other"]
-    let cities  = ["Riyadh", "Jeddah", "Abha", "Dammam", "Taif", "Meccah","Madinah","self Development","politics And Economics"]
-    let bookQuality = ["Good Quality","Meduim Quality" ,"Low Quality"]
+    let cities  = ["Riyadh", "Jeddah", "Abha", "Dammam", "Taif", "Makkah", "Madinah"]
+    let bookQuality = ["Good Quality", "Medium Quality", "Low Quality"]
     
     var body: some View {
-        
         NavigationView{
             VStack{
                 ScrollView{
-                    
                     VStack {
-                        VStack{
-                            //                            TextField(text:$textField1){
-                            //                                            Text("Book classification").foregroundColor(.white)
-                            //                                        }
-                            //                                        .padding(20).foregroundColor(.white).frame(width: 380,height: 50)
-                            //                                .frame(height: 65)
-                            //
-                            //                                .background(Color.clear)
-                            //                                .overlay(
-                            //                                                    RoundedRectangle(cornerRadius: 16)
-                            //                                                        .stroke(Color.white, lineWidth: 2)
-                            //                                                )
-                            
-                            //                            Menu {
-                            //                                ForEach(bookClassifications, id: \.self) { classification in
-                            //                                    Button(action: {
-                            //                                        self.textField1 = classification
-                            //                                    }) {
-                            //                                        Text(classification)
-                            //                                            .foregroundColor(.white)
-                            //                                    }
-                            //                                }
-                            //                            } label: {
-                            //                                PlaceholderTextField(placeholder: "Book Classification", text: $textField1)
-                            //                            }
-                            //                            .padding()
-                            Menu {
-                                ForEach(bookClassifications, id: \.self) { classification in
-                                    Button(action: {
-                                        self.textField1 = classification
-                                    }) {
-                                        Text(classification)
-                                            .foregroundColor(.white)
-                                    }
-                                }
-                            } label: {
-                                HStack {
-                                    Text("Select Book Classification")
-                                        .foregroundColor(textField1.isEmpty ? .white.opacity(0.5) : .white)
-                                        .padding(.horizontal, 16)
-                                    Spacer()
-                                    Image(systemName: "chevron.down")
-                                        .foregroundColor(.white)
-                                }
-                            }
-                            .padding()
-                            .frame(width: 380,height: 50)
-                            .frame(height: 65)
-                            .background(
-                                RoundedRectangle(cornerRadius: 16)
-                                    .stroke(Color.white, lineWidth: 2)
-                            )
-                            
-                            //  .padding()
-                            
-                            
-                            
-                            //  .padding()
-                            
-                            TextField(text:$textField2){
-                                Text("Book Name").foregroundColor(.white)
-                            }
-                            .padding(20).foregroundColor(.white).frame(width: 380,height: 50)
-                            .frame(height: 65)
-                            
-                            .background(Color.clear)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 16)
-                                    .stroke(Color.white, lineWidth: 2)
-                            )
-                            .padding()
-                            
-                            //                            TextField(text:$textField3){
-                            //                                Text("Book Condition").foregroundColor(.white)
-                            //                            }
-                            //                            .padding(20).foregroundColor(.white).frame(width: 380,height: 50)
-                            //                            .frame(height: 65)
-                            //
-                            //                            .background(Color.clear)
-                            //                            .overlay(
-                            //                                RoundedRectangle(cornerRadius: 16)
-                            //                                    .stroke(Color.white, lineWidth: 2)
-                            //                            )
-                            //                            .padding()
-                            Menu {
-                                ForEach(bookClassifications, id: \.self) { classification in
-                                    Button(action: {
-                                        self.textField1 = classification
-                                    }) {
-                                        Text(classification)
-                                            .foregroundColor(.white)
-                                    }
-                                }
-                            } label: {
-                                HStack {
-                                    Text("Select Book Classification")
-                                        .foregroundColor(textField1.isEmpty ? .white.opacity(0.5) : .white)
-                                        .padding(.horizontal, 16)
-                                    Spacer()
-                                    Image(systemName: "chevron.down")
-                                        .foregroundColor(.white)
-                                }
-                            }
-                            .padding()
-                            .frame(width: 380,height: 50)
-                            .frame(height: 65)
-                            .background(
-                                RoundedRectangle(cornerRadius: 16)
-                                    .stroke(Color.white, lineWidth: 2)
-                            )
-                            //
-                            //                            TextField(text:$textField4){
-                            //                                Text("Location").foregroundColor(.white)
-                            //                            }
-                            //                            .padding(20).foregroundColor(.white).frame(width: 380,height: 50)
-                            //                            .frame(height: 65)
-                            //
-                            //                            .background(Color.clear)
-                            //                            .overlay(
-                            //                                RoundedRectangle(cornerRadius: 16)
-                            //                                    .stroke(Color.white, lineWidth: 2)
-                            //                            )
-                            //                            .padding()
-                            
-                            Menu {
-                                ForEach(bookQuality, id: \.self) { classification in
-                                    Button(action: {
-                                        self.textField4 = classification
-                                    }) {
-                                        Text(classification)
-                                            .foregroundColor(.white)
-                                    }
-                                }
-                            } label: {
-                                HStack {
-                                    Text("Book Quality")
-                                        .foregroundColor(textField4.isEmpty ? .white.opacity(0.5) : .white)
-                                        .padding(.horizontal, 16)
-                                    Spacer()
-                                    Image(systemName: "chevron.down")
-                                        .foregroundColor(.white)
-                                }
-                            }
-                            .padding()
-                            .frame(width: 380,height: 50)
-                            .frame(height: 65)
-                            .background(
-                                RoundedRectangle(cornerRadius: 16)
-                                    .stroke(Color.white, lineWidth: 2)
-                            )
-                            .padding()
-                            
-                            TextField(text:$textField5){
-                                Text("Your email / Phone number ").foregroundColor(.white)
-                            }
-                            .padding(20).foregroundColor(.white).frame(width: 380,height: 50)
-                            .frame(height: 65)
-                            
-                            .background(Color.clear)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 16)
-                                    .stroke(Color.white, lineWidth: 2)
-                            )
-                            .padding()
-                            
-                            //                            Image("diary-of-a-madman")
-                            //                                .resizable()
-                            //                                .aspectRatio(contentMode: .fit)
-                            //                                .frame(width: 300,height: 300)
-                            //
-                            //                                .padding()
-                            if let image = selectedImage {
-                                Image(uiImage: image)
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: 300, height: 300)
-                                    .padding()
-                                
-                                
-                            }
-                            
-                            
-                            Button(action: {
-                                isShowingImagePicker = true
-                                te = ""
-                            }) {
-                                if isShowingImagePicker == false{
-                                    Text("\(te)")
-                                    .foregroundColor(.white)}
-                                else {
-                                    
-                                    Text("\( te)")
-                                }
-                            }
-                            .sheet(isPresented: $isShowingImagePicker) {
-                                ImagePicker(selectedImage: $selectedImage)
-                            }
+                        // Book Title
+                        TextField(text: $item.title){
+                            Text("Title").foregroundColor(.white)
+                        }
+                        .padding(20).foregroundColor(.white).frame(width: 380,height: 50)
+                        .frame(height: 65)
+                        .background(Color.clear)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 16)
+                                .stroke(Color.white, lineWidth: 2)
+                        )
+                        .padding()
+                        
+                        // Author
+                        TextField(text:$item.author){
+                            Text("Author").foregroundColor(.white)
+                        }
+                        .padding(20).foregroundColor(.white).frame(width: 380,height: 50)
+                        .frame(height: 65)
+                        .background(Color.clear)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 16)
+                                .stroke(Color.white, lineWidth: 2)
+                        )
+                        .padding()
+
+                        // Country
+                        TextField(text:$item.country){
+                            Text("Country").foregroundColor(.white)
+                        }
+                        .padding(20).foregroundColor(.white).frame(width: 380,height: 50)
+                        .frame(height: 65)
+                        .background(Color.clear)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 16)
+                                .stroke(Color.white, lineWidth: 2)
+                        )
+                        .padding()
+
+                        // Language
+                        TextField(text:$item.language){
+                            Text("Language").foregroundColor(.white)
+                        }
+                        .padding(20).foregroundColor(.white).frame(width: 380,height: 50)
+                        .frame(height: 65)
+                        .background(Color.clear)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 16)
+                                .stroke(Color.white, lineWidth: 2)
+                        )
+                        .padding()
+                        
+                        // pages
+                        TextField(text: $pagesText){
+                            Text("Pages").foregroundColor(.white)
+                        }
+                        .padding(20).foregroundColor(.white).frame(width: 380,height: 50)
+                        .frame(height: 65)
+                        .background(Color.clear)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 16)
+                                .stroke(Color.white, lineWidth: 2)
+                        )
+                        .padding()
+                        
+                        // year
+                        TextField(text: $yearText){
+                            Text("Year").foregroundColor(.white)
+                        }
+                        .padding(20).foregroundColor(.white).frame(width: 380,height: 50)
+                        .frame(height: 65)
+                        .background(Color.clear)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 16)
+                                .stroke(Color.white, lineWidth: 2)
+                        )
+                        .padding()
+                        
+//                        Menu {
+//                            ForEach(bookClassifications, id: \.self) { classification in
+//                                Button(action: {
+//                                    self.textField1 = classification
+//                                }) {
+//                                    Text(classification)
+//                                        .foregroundColor(.white)
+//                                }
+//                            }
+//                        } label: {
+//                            HStack {
+//                                Text("Select Book Classification")
+//                                    .foregroundColor(textField1.isEmpty ? .white.opacity(0.5) : .white)
+//                                    .padding(.horizontal, 16)
+//                                Spacer()
+//                                Image(systemName: "chevron.down")
+//                                    .foregroundColor(.white)
+//                            }
+//                        }
+//                        .padding()
+//                        .frame(width: 380,height: 50)
+//                        .frame(height: 65)
+//                        .background(
+//                            RoundedRectangle(cornerRadius: 16)
+//                                .stroke(Color.white, lineWidth: 2)
+//                        )
+                        
+                        
+                        if let image = selectedImage {
+                            Image(uiImage: image)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 300, height: 300)
+                                .padding()
                             
                             
                         }
                         
-                        
-                        
-                        
-                        
-                    }.toolbar { // <2>
-                        ToolbarItem() { // <3>
-                            HStack{
-                                
-                                Button(action: {
-                                    print("waleed")
-                                }, label: {
-                                    Image(systemName: "arrow.backward")
-                                        .resizable()
-                                        .frame(width: 35,height: 35)
-                                        .foregroundColor(.white)
-                                })
-                                
-                                Spacer()
-                                
-                                
-                                Text("NewPost")
-                                    .foregroundColor(.white)
-                                    .font(.system(size: 30))
-                                    .bold()
-                                Spacer()
-                                
-                                
-                                
-                                
-                                
-                            }.frame(width: 400)
-                            
-                            
+                        Button(action: {
+                            isShowingImagePicker = true
+                            te = ""
+                        }) {
+                            if isShowingImagePicker == false{
+                                Text("\(te)")
+                                .foregroundColor(.white)}
+                            else {
+
+                                Text("\(te)")
+                            }
                         }
+                        .sheet(isPresented: $isShowingImagePicker) {
+                            ImagePicker(selectedImage: $selectedImage)
+                        }
+                        
+                        Button(
+                            action: {
+                                print("New post")
+                                let pages = Int(pagesText) ?? 1
+                                let year = Int(yearText) ?? 2020
+                                item.pages = pages
+                                item.year = year
+                                bookItems.addItem(item: item)
+                                bookItems.saveItems()
+                                // we need to move to home
+                            },
+                            label: {
+                                Text("Submit")
+                                .foregroundColor(.white)
+                            }
+                        )
+                        .padding()
+                        
                     }
-                    
-                    
                     .padding()
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     
                     
                 }
-            }.background((
+                .padding(.top, 150)
+                .padding(.bottom, 80)
+            }
+            // background color
+            .frame(maxWidth: .infinity)
+            .background(
                 LinearGradient(
                     stops: [
                         Gradient.Stop(color: Color(red: 0.06, green: 0.19, blue: 0.34), location: 0.08),
@@ -310,7 +225,19 @@ struct NewPost: View {
                     startPoint: UnitPoint(x: 0.5, y: 0),
                     endPoint: UnitPoint(x: 0.5, y: 1)
                 )
-            ))
+            )
+            .edgesIgnoringSafeArea(.all)
+            .toolbar(){ // <2>
+                ToolbarItem() { // <3>
+                    HStack{
+                        Text("New Book")
+                            .foregroundColor(.white)
+                            .font(.system(size: 28))
+                        
+                            .bold()
+                    }.frame(width: 380)
+                }
+            }
             
         }
     }
