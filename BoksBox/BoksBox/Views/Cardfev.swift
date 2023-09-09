@@ -11,6 +11,8 @@ import SwiftUI
 
 struct Cardfev: View {
     @EnvironmentObject var vm: Vm
+    @EnvironmentObject var bookItems: BookItemsViewModel
+
     var image:String = "a2"
     var titil:String = "Book Tiltle"
     var icon:String = "heart"

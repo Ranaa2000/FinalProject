@@ -13,6 +13,7 @@ var texwt:Array<String> = ["a1"," a1"]
 
 struct FavoriteView: View {
     @EnvironmentObject var vm: Vm
+    @EnvironmentObject var bookItems: BookItemsViewModel
 
     let columns = [
         GridItem(.flexible()),
@@ -69,10 +70,4 @@ struct FavoriteView: View {
 
         }    }
 
-
-struct FavoriteView_Previews: PreviewProvider {
-    static var previews: some View {
-        FavoriteView()
-    }
-}
 

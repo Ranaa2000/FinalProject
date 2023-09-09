@@ -16,29 +16,26 @@
 		2B4EEC692AABA1BD00169F2B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2B4EEC682AABA1BD00169F2B /* GoogleService-Info.plist */; };
 		2B4EEC6B2AABBBE600169F2B /* BookItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4EEC6A2AABBBE600169F2B /* BookItemModel.swift */; };
 		2B5475462AACA98200CA1A72 /* BookItemsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5475452AACA98200CA1A72 /* BookItemsViewModel.swift */; };
-		305371942AA909E000C4DA01 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305371932AA909E000C4DA01 /* Model.swift */; };
+		2BD2364C2AACCC0100E29EAB /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD2364B2AACCC0100E29EAB /* SearchView.swift */; };
 		305371962AA90C5400C4DA01 /* vm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305371952AA90C5400C4DA01 /* vm.swift */; };
 		305371982AA9B7E600C4DA01 /* Cardfev.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305371972AA9B7E600C4DA01 /* Cardfev.swift */; };
 		3053719A2AA9C2FE00C4DA01 /* ShicToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305371992AA9C2FE00C4DA01 /* ShicToken.swift */; };
 		3053719C2AA9C31800C4DA01 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3053719B2AA9C31800C4DA01 /* Token.swift */; };
 		3074987F2AA8F902006C6E43 /* ListOfCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3074986D2AA8F902006C6E43 /* ListOfCards.swift */; };
 		307498802AA8F902006C6E43 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3074986E2AA8F902006C6E43 /* WelcomeView.swift */; };
-		307498812AA8F902006C6E43 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3074986F2AA8F902006C6E43 /* SearchView.swift */; };
 		307498822AA8F902006C6E43 /* CastomTextFild.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307498702AA8F902006C6E43 /* CastomTextFild.swift */; };
 		307498832AA8F902006C6E43 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307498712AA8F902006C6E43 /* SignUp.swift */; };
 		307498842AA8F903006C6E43 /* textbuttunSignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307498722AA8F902006C6E43 /* textbuttunSignUp.swift */; };
 		307498852AA8F903006C6E43 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307498732AA8F902006C6E43 /* TabView.swift */; };
 		307498862AA8F903006C6E43 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307498742AA8F902006C6E43 /* LogInView.swift */; };
 		307498872AA8F903006C6E43 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307498752AA8F902006C6E43 /* HomeView.swift */; };
-		307498882AA8F903006C6E43 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307498762AA8F902006C6E43 /* File.swift */; };
 		307498892AA8F903006C6E43 /* ShowDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307498772AA8F902006C6E43 /* ShowDetailsView.swift */; };
 		3074988A2AA8F903006C6E43 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307498782AA8F902006C6E43 /* Color.swift */; };
-		3074988C2AA8F903006C6E43 /* CardDetails .swift in Sources */ = {isa = PBXBuildFile; fileRef = 3074987A2AA8F902006C6E43 /* CardDetails .swift */; };
+		3074988C2AA8F903006C6E43 /* CardDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3074987A2AA8F902006C6E43 /* CardDetails.swift */; };
 		3074988D2AA8F903006C6E43 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3074987B2AA8F902006C6E43 /* Image.swift */; };
 		3074988E2AA8F903006C6E43 /* textbuttum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3074987C2AA8F902006C6E43 /* textbuttum.swift */; };
 		307498902AA8F903006C6E43 /* Fivoret.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3074987E2AA8F902006C6E43 /* Fivoret.swift */; };
 		3090DD702AA8C7800088C89E /* BoksBoxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3090DD6F2AA8C7800088C89E /* BoksBoxApp.swift */; };
-		3090DD722AA8C7800088C89E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3090DD712AA8C7800088C89E /* ContentView.swift */; };
 		3090DD742AA8C7820088C89E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3090DD732AA8C7820088C89E /* Assets.xcassets */; };
 		3090DD772AA8C7820088C89E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3090DD762AA8C7820088C89E /* Preview Assets.xcassets */; };
 		FAFE77BB2AA9E20F00F81EA7 /* NewPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFE77BA2AA9E20F00F81EA7 /* NewPost.swift */; };
@@ -50,30 +47,27 @@
 		2B4EEC682AABA1BD00169F2B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2B4EEC6A2AABBBE600169F2B /* BookItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookItemModel.swift; sourceTree = "<group>"; };
 		2B5475452AACA98200CA1A72 /* BookItemsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookItemsViewModel.swift; sourceTree = "<group>"; };
-		305371932AA909E000C4DA01 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		2BD2364B2AACCC0100E29EAB /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		305371952AA90C5400C4DA01 /* vm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vm.swift; sourceTree = "<group>"; };
 		305371972AA9B7E600C4DA01 /* Cardfev.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cardfev.swift; sourceTree = "<group>"; };
 		305371992AA9C2FE00C4DA01 /* ShicToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShicToken.swift; sourceTree = "<group>"; };
 		3053719B2AA9C31800C4DA01 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		3074986D2AA8F902006C6E43 /* ListOfCards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfCards.swift; sourceTree = "<group>"; };
 		3074986E2AA8F902006C6E43 /* WelcomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
-		3074986F2AA8F902006C6E43 /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		307498702AA8F902006C6E43 /* CastomTextFild.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CastomTextFild.swift; sourceTree = "<group>"; };
 		307498712AA8F902006C6E43 /* SignUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		307498722AA8F902006C6E43 /* textbuttunSignUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = textbuttunSignUp.swift; sourceTree = "<group>"; };
 		307498732AA8F902006C6E43 /* TabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 		307498742AA8F902006C6E43 /* LogInView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 		307498752AA8F902006C6E43 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		307498762AA8F902006C6E43 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		307498772AA8F902006C6E43 /* ShowDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowDetailsView.swift; sourceTree = "<group>"; };
 		307498782AA8F902006C6E43 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		3074987A2AA8F902006C6E43 /* CardDetails .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CardDetails .swift"; sourceTree = "<group>"; };
+		3074987A2AA8F902006C6E43 /* CardDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDetails.swift; sourceTree = "<group>"; };
 		3074987B2AA8F902006C6E43 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		3074987C2AA8F902006C6E43 /* textbuttum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = textbuttum.swift; sourceTree = "<group>"; };
 		3074987E2AA8F902006C6E43 /* Fivoret.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fivoret.swift; sourceTree = "<group>"; };
 		3090DD6C2AA8C7800088C89E /* BoksBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoksBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3090DD6F2AA8C7800088C89E /* BoksBoxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoksBoxApp.swift; sourceTree = "<group>"; };
-		3090DD712AA8C7800088C89E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3090DD732AA8C7820088C89E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3090DD762AA8C7820088C89E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FAFE77BA2AA9E20F00F81EA7 /* NewPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPost.swift; sourceTree = "<group>"; };
@@ -98,11 +92,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2BD236482AACCA6100E29EAB /* MainViews */ = {
+			isa = PBXGroup;
+			children = (
+				3074986E2AA8F902006C6E43 /* WelcomeView.swift */,
+				3074987E2AA8F902006C6E43 /* Fivoret.swift */,
+				307498732AA8F902006C6E43 /* TabView.swift */,
+				2BD2364B2AACCC0100E29EAB /* SearchView.swift */,
+				FAFE77BA2AA9E20F00F81EA7 /* NewPost.swift */,
+				FAFE77BC2AA9E32100F81EA7 /* Profile.swift */,
+			);
+			path = MainViews;
+			sourceTree = "<group>";
+		};
+		2BD236492AACCAA900E29EAB /* AuthViews */ = {
+			isa = PBXGroup;
+			children = (
+				307498712AA8F902006C6E43 /* SignUp.swift */,
+				307498742AA8F902006C6E43 /* LogInView.swift */,
+			);
+			path = AuthViews;
+			sourceTree = "<group>";
+		};
+		2BD2364D2AACFC4100E29EAB /* HomeViews */ = {
+			isa = PBXGroup;
+			children = (
+				3074987A2AA8F902006C6E43 /* CardDetails.swift */,
+				3074986D2AA8F902006C6E43 /* ListOfCards.swift */,
+				307498752AA8F902006C6E43 /* HomeView.swift */,
+			);
+			path = HomeViews;
+			sourceTree = "<group>";
+		};
 		305371902AA909A200C4DA01 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2BD2364D2AACFC4100E29EAB /* HomeViews */,
 				305371972AA9B7E600C4DA01 /* Cardfev.swift */,
 				305371992AA9C2FE00C4DA01 /* ShicToken.swift */,
+				2BD236492AACCAA900E29EAB /* AuthViews */,
+				2BD236482AACCA6100E29EAB /* MainViews */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -120,7 +149,6 @@
 		305371922AA909C000C4DA01 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				305371932AA909E000C4DA01 /* Model.swift */,
 				2B4EEC6A2AABBBE600169F2B /* BookItemModel.swift */,
 			);
 			path = Model;
@@ -145,32 +173,19 @@
 		3090DD6E2AA8C7800088C89E /* BoksBox */ = {
 			isa = PBXGroup;
 			children = (
+				3074987C2AA8F902006C6E43 /* textbuttum.swift */,
+				307498722AA8F902006C6E43 /* textbuttunSignUp.swift */,
+				307498772AA8F902006C6E43 /* ShowDetailsView.swift */,
+				307498782AA8F902006C6E43 /* Color.swift */,
+				307498702AA8F902006C6E43 /* CastomTextFild.swift */,
+				3074987B2AA8F902006C6E43 /* Image.swift */,
+				FAFE77BE2AA9E36E00F81EA7 /* SettingView.swift */,
 				2B4EEC682AABA1BD00169F2B /* GoogleService-Info.plist */,
 				305371922AA909C000C4DA01 /* Model */,
 				305371912AA909AE00C4DA01 /* ViewModel */,
 				305371902AA909A200C4DA01 /* Views */,
-				3074987A2AA8F902006C6E43 /* CardDetails .swift */,
-				FAFE77BA2AA9E20F00F81EA7 /* NewPost.swift */,
-				FAFE77BC2AA9E32100F81EA7 /* Profile.swift */,
-				307498702AA8F902006C6E43 /* CastomTextFild.swift */,
-				FAFE77BE2AA9E36E00F81EA7 /* SettingView.swift */,
-				307498782AA8F902006C6E43 /* Color.swift */,
-				307498762AA8F902006C6E43 /* File.swift */,
-				3074987E2AA8F902006C6E43 /* Fivoret.swift */,
-				307498752AA8F902006C6E43 /* HomeView.swift */,
-				3074987B2AA8F902006C6E43 /* Image.swift */,
-				3074986D2AA8F902006C6E43 /* ListOfCards.swift */,
-				307498742AA8F902006C6E43 /* LogInView.swift */,
-				3074986F2AA8F902006C6E43 /* SearchView.swift */,
-				307498772AA8F902006C6E43 /* ShowDetailsView.swift */,
-				307498712AA8F902006C6E43 /* SignUp.swift */,
-				307498732AA8F902006C6E43 /* TabView.swift */,
-				3074987C2AA8F902006C6E43 /* textbuttum.swift */,
-				307498722AA8F902006C6E43 /* textbuttunSignUp.swift */,
-				3074986E2AA8F902006C6E43 /* WelcomeView.swift */,
 				3090DD732AA8C7820088C89E /* Assets.xcassets */,
 				3090DD6F2AA8C7800088C89E /* BoksBoxApp.swift */,
-				3090DD712AA8C7800088C89E /* ContentView.swift */,
 				3090DD752AA8C7820088C89E /* Preview Content */,
 			);
 			path = BoksBox;
@@ -268,15 +283,13 @@
 			files = (
 				307498862AA8F903006C6E43 /* LogInView.swift in Sources */,
 				307498892AA8F903006C6E43 /* ShowDetailsView.swift in Sources */,
-				307498882AA8F903006C6E43 /* File.swift in Sources */,
 				FAFE77BD2AA9E32100F81EA7 /* Profile.swift in Sources */,
 				307498902AA8F903006C6E43 /* Fivoret.swift in Sources */,
 				307498832AA8F902006C6E43 /* SignUp.swift in Sources */,
 				2B4EEC6B2AABBBE600169F2B /* BookItemModel.swift in Sources */,
-				307498812AA8F902006C6E43 /* SearchView.swift in Sources */,
-				3090DD722AA8C7800088C89E /* ContentView.swift in Sources */,
 				305371982AA9B7E600C4DA01 /* Cardfev.swift in Sources */,
 				307498822AA8F902006C6E43 /* CastomTextFild.swift in Sources */,
+				2BD2364C2AACCC0100E29EAB /* SearchView.swift in Sources */,
 				307498872AA8F903006C6E43 /* HomeView.swift in Sources */,
 				2B5475462AACA98200CA1A72 /* BookItemsViewModel.swift in Sources */,
 				3090DD702AA8C7800088C89E /* BoksBoxApp.swift in Sources */,
@@ -285,9 +298,8 @@
 				3074987F2AA8F902006C6E43 /* ListOfCards.swift in Sources */,
 				3053719C2AA9C31800C4DA01 /* Token.swift in Sources */,
 				307498842AA8F903006C6E43 /* textbuttunSignUp.swift in Sources */,
-				305371942AA909E000C4DA01 /* Model.swift in Sources */,
 				305371962AA90C5400C4DA01 /* vm.swift in Sources */,
-				3074988C2AA8F903006C6E43 /* CardDetails .swift in Sources */,
+				3074988C2AA8F903006C6E43 /* CardDetails.swift in Sources */,
 				FAFE77BF2AA9E36E00F81EA7 /* SettingView.swift in Sources */,
 				3074988E2AA8F903006C6E43 /* textbuttum.swift in Sources */,
 				307498852AA8F903006C6E43 /* TabView.swift in Sources */,

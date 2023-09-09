@@ -19,7 +19,7 @@ struct BookItem: Hashable {
     var pages: Int
     var title: String
     var year: Int
-    var imageUrl: String = ""
+    var imageUrl: URL = URL(string: "https://placehold.co/400")!
 
     // json key to object attribute mapping
     var dictionary: [String: Any] {

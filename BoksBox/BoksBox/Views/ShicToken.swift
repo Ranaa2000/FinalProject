@@ -24,9 +24,3 @@ struct SheckTheToken: View {
         }
     }
 }
-
-struct SheckTheToken_Previews: PreviewProvider {
-    static var previews: some View {
-        SheckTheToken()
-    }
-}

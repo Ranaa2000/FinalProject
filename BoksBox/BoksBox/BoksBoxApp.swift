@@ -24,12 +24,14 @@ struct BoksBoxApp: App {
 //        FirebaseApp.configure()
 //    }
     @ObservedObject var vm = Vm()
+    @ObservedObject var bookItems = BookItemsViewModel()
     
     var body: some Scene {
         WindowGroup {
          
                 WelcomeView()
                     .environmentObject(vm)
+                    .environmentObject(bookItems)
             
         }
     }

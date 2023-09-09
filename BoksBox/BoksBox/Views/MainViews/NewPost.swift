@@ -47,7 +47,7 @@ struct NewPost: View {
     @State private var textField4 = ""
     @State private var textField5 = ""
     
-    let bookClassifications = ["science And Engineering", "biographies And Memoirs", "stories And Novels", "computer And Technology", " thought And Culture","medical Sciences"]
+    let bookClassifications = ["Educational" , "Cultural" ,"Novel" ,"Other"]
     let cities  = ["Riyadh", "Jeddah", "Abha", "Dammam", "Taif", "Meccah","Madinah","self Development","politics And Economics"]
     let bookQuality = ["Good Quality","Meduim Quality" ,"Low Quality"]
     
@@ -211,7 +211,7 @@ struct NewPost: View {
                             .padding()
                             
                             TextField(text:$textField5){
-                                Text("Contacts").foregroundColor(.white)
+                                Text("Your email / Phone number ").foregroundColor(.white)
                             }
                             .padding(20).foregroundColor(.white).frame(width: 380,height: 50)
                             .frame(height: 65)

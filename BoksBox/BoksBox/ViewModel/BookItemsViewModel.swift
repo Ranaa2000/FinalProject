@@ -8,13 +8,14 @@
 import Foundation
 
 class BookItemsViewModel: ObservableObject{
-    @Published var list: Array<BookItem> = []
-   
+    @Published var items: Array<BookItem> = []
+    @Published var loaded: Bool = false
+
     func addItem(item: BookItem)  {
-        list.append(item)
+        items.append(item)
     }
     
     func deleteItems(at offsets: IndexSet) {
-        list.remove(atOffsets: offsets)
+        items.remove(atOffsets: offsets)
     }
 }
