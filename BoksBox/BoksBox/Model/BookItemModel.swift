@@ -8,6 +8,7 @@
 import Foundation
 import FirebaseDatabase
 
+// MARK: Book Item definition according to firebase database
 struct BookItem: Hashable {
     let ref: DatabaseReference?
     var author: String
@@ -18,7 +19,9 @@ struct BookItem: Hashable {
     var pages: Int
     var title: String
     var year: Int
-    
+    var imageUrl: String = ""
+
+    // json key to object attribute mapping
     var dictionary: [String: Any] {
         return [
             "author": author,
@@ -32,6 +35,7 @@ struct BookItem: Hashable {
         ]
     }
     
+    // MARK: To initialize Book Item object from JSON string
     init?(snapshot: DataSnapshot) {
         guard let value = snapshot.value as? [String: AnyObject],
             let author = value["author"] as? String,
@@ -55,7 +59,7 @@ struct BookItem: Hashable {
         self.year = year
     }
 
-    // MARK: Convert GroceryItem to AnyObject
+    // MARK: Convert BookItem to JSON string
     func toAnyObject() -> [String: Any] {
       return [
         "author": author,

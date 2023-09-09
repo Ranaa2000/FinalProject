@@ -15,6 +15,7 @@
 		2B4EEC672AABA0BA00169F2B /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 2B4EEC662AABA0BA00169F2B /* FirebaseStorage */; };
 		2B4EEC692AABA1BD00169F2B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2B4EEC682AABA1BD00169F2B /* GoogleService-Info.plist */; };
 		2B4EEC6B2AABBBE600169F2B /* BookItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4EEC6A2AABBBE600169F2B /* BookItemModel.swift */; };
+		2B5475462AACA98200CA1A72 /* BookItemsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5475452AACA98200CA1A72 /* BookItemsViewModel.swift */; };
 		305371942AA909E000C4DA01 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305371932AA909E000C4DA01 /* Model.swift */; };
 		305371962AA90C5400C4DA01 /* vm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305371952AA90C5400C4DA01 /* vm.swift */; };
 		305371982AA9B7E600C4DA01 /* Cardfev.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305371972AA9B7E600C4DA01 /* Cardfev.swift */; };
@@ -48,6 +49,7 @@
 /* Begin PBXFileReference section */
 		2B4EEC682AABA1BD00169F2B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2B4EEC6A2AABBBE600169F2B /* BookItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookItemModel.swift; sourceTree = "<group>"; };
+		2B5475452AACA98200CA1A72 /* BookItemsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookItemsViewModel.swift; sourceTree = "<group>"; };
 		305371932AA909E000C4DA01 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		305371952AA90C5400C4DA01 /* vm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vm.swift; sourceTree = "<group>"; };
 		305371972AA9B7E600C4DA01 /* Cardfev.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cardfev.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			children = (
 				305371952AA90C5400C4DA01 /* vm.swift */,
 				3053719B2AA9C31800C4DA01 /* Token.swift */,
+				2B5475452AACA98200CA1A72 /* BookItemsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				305371982AA9B7E600C4DA01 /* Cardfev.swift in Sources */,
 				307498822AA8F902006C6E43 /* CastomTextFild.swift in Sources */,
 				307498872AA8F903006C6E43 /* HomeView.swift in Sources */,
+				2B5475462AACA98200CA1A72 /* BookItemsViewModel.swift in Sources */,
 				3090DD702AA8C7800088C89E /* BoksBoxApp.swift in Sources */,
 				3074988A2AA8F903006C6E43 /* Color.swift in Sources */,
 				3074988D2AA8F903006C6E43 /* Image.swift in Sources */,
