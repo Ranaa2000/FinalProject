@@ -16,16 +16,37 @@ struct SignUpView: View {
     @State var Username: String = ""
     var f : String = "Enter your username/Gmail"
     var body: some View {
-        NavigationStack{ VStack {
-            CastomTextFild(Controlir: Enteryourname, text: "Enter your name").padding(.bottom)
-            CastomTextFild(Controlir: Email, text: "Email").padding(.bottom)
-            CastomTextFild(Controlir: Password, text: "Password").padding(.bottom)
-            CastomTextFild(Controlir: PasswordCorint, text: "Password Corint").padding(.bottom)
-            CastomTextFild(Controlir: Username, text: "Username").padding(.bottom)
+        NavigationStack{
+            VStack {
+                TextField("aa", text: $Email)
+                    .background(Color.red)
                 
-            Button {createUser(username: Email, Password: Password)}
-        label: {textbuttunSignUp()}
-                .padding(.top,20)
+                TextField("aa", text: $Password)
+                    .background(Color.red)
+//            CastomTextFild(Controlir: Enteryourname, text: "Enter your name").padding(.bottom)
+//            CastomTextFild(Controlir: Email, text: "Email").padding(.bottom)
+//            CastomTextFild(Controlir: Password, text: "Password").padding(.bottom)
+//            CastomTextFild(Controlir: PasswordCorint, text: "Password Corint").padding(.bottom)
+//            CastomTextFild(Controlir: Username, text: "Username").padding(.bottom)
+            
+//            Button {
+//                createUser(username: Email, Password: Password)
+//                print("a")
+//            }
+//        label: {
+//            textbuttunSignUp()
+//
+//        }
+            Button {
+                print("z")
+                createUser(username: Email, Password: Password)
+            } label: {
+                Text("add")
+            }
+
+            
+            
+              //  .padding(.top,20)
             
             HStack{
                 Text("Already have an account? ").font(Font.headline).foregroundColor(.white).bold()
@@ -47,17 +68,14 @@ struct SignUpView: View {
         .padding()
     }}
     func createUser(username:String,Password:String){
-        Auth.auth().createUser(withEmail: username, password: Password){ok,erorr
-            in
-            if erorr == nil {
-                
-//                boolpage = true
-                print(" ok")
-            }else
-            {
-//                texteror = Text("Sorry, the password or email is incorrect")
-                print("nit ok")
-            }}}
+        Auth.auth().createUser(withEmail: username, password: Password){ok,error in
+            if error != nil{
+                print("hh")
+            } else{
+                print("hjf")
+            }
+        }
+    }
 }
 
 struct SignUpView_Previews: PreviewProvider {
@@ -65,3 +83,13 @@ struct SignUpView_Previews: PreviewProvider {
         SignUpView(Enteryourname: "", Email: "",Password: "",PasswordCorint: "",Username: "")
     }
 }
+
+    //            if erorr == nil {
+    //
+    ////                boolpage = true
+    //                print(" ok")
+    //            }else
+    //            {
+    ////                texteror = Text("Sorry, the password or email is incorrect")
+    //                print("nit ok")
+    //            }}

@@ -8,5 +8,5 @@
 import Foundation
 import SwiftUI
 class Gwt: ObservableObject{
-    @AppStorage("gwt") var Token : String = "d"
+    @AppStorage("gwt") var Token : String = ""
 }

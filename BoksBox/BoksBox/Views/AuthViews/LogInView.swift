@@ -15,9 +15,14 @@ struct LogInView: View {
     var body: some View {
         NavigationStack{ VStack {
             image()
-            CastomTextFild(Controlir: Email, text: "Enter your username/Gmail").padding(.bottom)
-            CastomTextFild(Controlir: Password, text: "Password")
+            TextField("aa", text: $Email)
+                .background(Color.red)
             
+            TextField("aa", text: $Password)
+                .background(Color.red)
+//            CastomTextFild(Controlir: Email, text: "Enter your username/Gmail").padding(.bottom)
+//            CastomTextFild(Controlir: Password, text: "Password")
+//
             Button {
                 signIn(username: Email, Password: Password)
                 
