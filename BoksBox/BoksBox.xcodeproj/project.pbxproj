@@ -21,6 +21,8 @@
 		305371982AA9B7E600C4DA01 /* Cardfev.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305371972AA9B7E600C4DA01 /* Cardfev.swift */; };
 		3053719A2AA9C2FE00C4DA01 /* ShicToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305371992AA9C2FE00C4DA01 /* ShicToken.swift */; };
 		3053719C2AA9C31800C4DA01 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3053719B2AA9C31800C4DA01 /* Token.swift */; };
+		3053719F2AADB00D00C4DA01 /* 113-173-loading-book.riv in Resources */ = {isa = PBXBuildFile; fileRef = 3053719E2AADB00D00C4DA01 /* 113-173-loading-book.riv */; };
+		305371A22AADB0A300C4DA01 /* RiveRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = 305371A12AADB0A300C4DA01 /* RiveRuntime */; };
 		3074987F2AA8F902006C6E43 /* ListOfCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3074986D2AA8F902006C6E43 /* ListOfCards.swift */; };
 		307498802AA8F902006C6E43 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3074986E2AA8F902006C6E43 /* WelcomeView.swift */; };
 		307498822AA8F902006C6E43 /* CastomTextFild.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307498702AA8F902006C6E43 /* CastomTextFild.swift */; };
@@ -52,6 +54,7 @@
 		305371972AA9B7E600C4DA01 /* Cardfev.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cardfev.swift; sourceTree = "<group>"; };
 		305371992AA9C2FE00C4DA01 /* ShicToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShicToken.swift; sourceTree = "<group>"; };
 		3053719B2AA9C31800C4DA01 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		3053719E2AADB00D00C4DA01 /* 113-173-loading-book.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = "113-173-loading-book.riv"; sourceTree = "<group>"; };
 		3074986D2AA8F902006C6E43 /* ListOfCards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfCards.swift; sourceTree = "<group>"; };
 		3074986E2AA8F902006C6E43 /* WelcomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		307498702AA8F902006C6E43 /* CastomTextFild.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CastomTextFild.swift; sourceTree = "<group>"; };
@@ -82,6 +85,7 @@
 			files = (
 				2B4EEC652AABA0BA00169F2B /* FirebaseDatabaseSwift in Frameworks */,
 				2B4EEC5D2AABA0BA00169F2B /* FirebaseAnalytics in Frameworks */,
+				305371A22AADB0A300C4DA01 /* RiveRuntime in Frameworks */,
 				2B4EEC612AABA0BA00169F2B /* FirebaseAuth in Frameworks */,
 				2B4EEC632AABA0BA00169F2B /* FirebaseDatabase in Frameworks */,
 				2B4EEC5F2AABA0BA00169F2B /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
@@ -154,6 +158,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		3053719D2AADAFFC00C4DA01 /* Rive */ = {
+			isa = PBXGroup;
+			children = (
+				3053719E2AADB00D00C4DA01 /* 113-173-loading-book.riv */,
+			);
+			path = Rive;
+			sourceTree = "<group>";
+		};
 		3090DD632AA8C7800088C89E = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +185,7 @@
 		3090DD6E2AA8C7800088C89E /* BoksBox */ = {
 			isa = PBXGroup;
 			children = (
+				3053719D2AADAFFC00C4DA01 /* Rive */,
 				3074987C2AA8F902006C6E43 /* textbuttum.swift */,
 				307498722AA8F902006C6E43 /* textbuttunSignUp.swift */,
 				307498772AA8F902006C6E43 /* ShowDetailsView.swift */,
@@ -222,6 +235,7 @@
 				2B4EEC622AABA0BA00169F2B /* FirebaseDatabase */,
 				2B4EEC642AABA0BA00169F2B /* FirebaseDatabaseSwift */,
 				2B4EEC662AABA0BA00169F2B /* FirebaseStorage */,
+				305371A12AADB0A300C4DA01 /* RiveRuntime */,
 			);
 			productName = BoksBox;
 			productReference = 3090DD6C2AA8C7800088C89E /* BoksBox.app */;
@@ -253,6 +267,7 @@
 			mainGroup = 3090DD632AA8C7800088C89E;
 			packageReferences = (
 				2B4EEC5B2AABA0BA00169F2B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				305371A02AADB0A300C4DA01 /* XCRemoteSwiftPackageReference "rive-ios" */,
 			);
 			productRefGroup = 3090DD6D2AA8C7800088C89E /* Products */;
 			projectDirPath = "";
@@ -271,6 +286,7 @@
 				2B4EEC692AABA1BD00169F2B /* GoogleService-Info.plist in Resources */,
 				3090DD772AA8C7820088C89E /* Preview Assets.xcassets in Resources */,
 				3090DD742AA8C7820088C89E /* Assets.xcassets in Resources */,
+				3053719F2AADB00D00C4DA01 /* 113-173-loading-book.riv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,6 +532,14 @@
 				minimumVersion = 10.0.0;
 			};
 		};
+		305371A02AADB0A300C4DA01 /* XCRemoteSwiftPackageReference "rive-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rive-app/rive-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -548,6 +572,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2B4EEC5B2AABA0BA00169F2B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		305371A12AADB0A300C4DA01 /* RiveRuntime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 305371A02AADB0A300C4DA01 /* XCRemoteSwiftPackageReference "rive-ios" */;
+			productName = RiveRuntime;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

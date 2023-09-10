@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-//import FirebaseAuth
+import FirebaseAuth
 
 struct LogInView: View {
     @State var Password: String = ""
@@ -19,7 +19,7 @@ struct LogInView: View {
             CastomTextFild(Controlir: Password, text: "Password")
             
             Button {
-                //signIn(username: Email, Password: Password)
+                signIn(username: Email, Password: Password)
                 
             }
         label: {textbuttun()}
@@ -35,21 +35,21 @@ struct LogInView: View {
         }.frame(width: 400,height: 900).background(Colors().Backgroundcolor)
                 .padding()
         }}
-//    func signIn(username:String,Password:String){
-//        Auth.auth().signIn(withEmail: username, password: Password){ok,erorr
-//            in
-//            if erorr == nil {
-//                Gwt().Token = "token"
-//                boolpage = true
-//                print(" ok")
-//            }else
-//            {
+    func signIn(username:String,Password:String){
+        Auth.auth().signIn(withEmail: username, password: Password){ok,erorr
+            in
+            if erorr == nil {
+                Gwt().Token = "token"
+                
+                print(" ok")
+            }else
+            {
 //                texteror = Text("Sorry, the password or email is incorrect")
-//                print("nit ok")
-//            }
-//
-//        }
-//    }
+                print("nit ok")
+            }
+
+        }
+    }
 
 }
 struct LogInView_Previews: PreviewProvider {

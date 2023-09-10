@@ -8,7 +8,7 @@
 
 
 import SwiftUI
-
+import RiveRuntime
 
 
 
@@ -27,7 +27,7 @@ struct WelcomeView: View {
                     .bold().padding(.bottom,259)
                     
                     VStack{
-                        //                RiveViewModel(fileName:"113-173-loading-book").view().frame(width: 240,height: 650).padding(-158).padding(.leading,65)
+                                        RiveViewModel(fileName:"113-173-loading-book").view().frame(width: 240,height: 650).padding(-158).padding(.leading,65)
                         Spacer()
                         
                         NavigationLink {

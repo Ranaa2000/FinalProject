@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-//import FirebaseAuth
+import FirebaseAuth
 
 struct SignUpView: View {
     @State var Enteryourname: String = "ger"
@@ -23,7 +23,7 @@ struct SignUpView: View {
             CastomTextFild(Controlir: PasswordCorint, text: "Password Corint").padding(.bottom)
             CastomTextFild(Controlir: Username, text: "Username").padding(.bottom)
                 
-            Button {}
+            Button {createUser(username: Email, Password: Password)}
         label: {textbuttunSignUp()}
                 .padding(.top,20)
             
@@ -46,18 +46,18 @@ struct SignUpView: View {
         ))
         .padding()
     }}
-//    func createUser(username:String,Password:String){
-//        Auth.auth().createUser(withEmail: username, password: Password){ok,erorr
-//            in
-//            if erorr == nil {
-//                
+    func createUser(username:String,Password:String){
+        Auth.auth().createUser(withEmail: username, password: Password){ok,erorr
+            in
+            if erorr == nil {
+                
 //                boolpage = true
-//                print(" ok")
-//            }else
-//            {
+                print(" ok")
+            }else
+            {
 //                texteror = Text("Sorry, the password or email is incorrect")
-//                print("nit ok")
-//            }}}
+                print("nit ok")
+            }}}
 }
 
 struct SignUpView_Previews: PreviewProvider {
