@@ -28,10 +28,10 @@ struct BoksBoxApp: App {
     @ObservedObject var bookItems = BookItemsViewModel()
     var body: some Scene {
         WindowGroup {
-            SignUpView()
-//                WelcomeView()
-//                    .environmentObject(vm)
-//                    .environmentObject(bookItems)
+          
+                WelcomeView()
+                    .environmentObject(vm)
+                    .environmentObject(bookItems)
             
         }
     }

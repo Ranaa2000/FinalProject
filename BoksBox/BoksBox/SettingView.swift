@@ -94,6 +94,14 @@ struct ListView: View {
                     ))
                 }
             }
+            Button(action: {
+                Gwt().Token = ""
+            }, label: {
+                Section(header: Text("sing out")) {
+                 
+                }
+            })
+            
         }
     }
 }
