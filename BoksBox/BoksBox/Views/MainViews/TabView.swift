@@ -39,7 +39,7 @@ struct TabdView: View {
                 .toolbar(.visible, for: .tabBar)
                 .toolbarBackground(Color("blueC") ,for: .tabBar)
             
-           SearchView()
+            Profile()
                 .tabItem {
                     Label("Profile", systemImage: "person")
                 }
