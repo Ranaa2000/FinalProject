@@ -13,7 +13,7 @@ struct SignUpView: View {
     @State var Rive : riveView?
     @State var coloreror: Color = Color.red
     @State var texteror: Text = Text("")
-    @State var Enteryourname: String = "ger"
+    @State var Enteryourname: String = ""
     @State var Email: String = ""
     @State var Password: String = ""
     @State var PasswordCorint: String = ""
