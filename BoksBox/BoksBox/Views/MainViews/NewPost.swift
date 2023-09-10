@@ -194,9 +194,14 @@ struct NewPost: View {
                                 let year = Int(yearText) ?? 2020
                                 item.pages = pages
                                 item.year = year
-                                bookItems.addItem(item: item)
-                                bookItems.saveItems()
-                                // we need to move to home
+                                let imageFileName = "\(UUID().uuidString).jpg"
+                                if let imageData = selectedImage {
+                                    bookItems.uploadImage(selectedImage: imageData, imageFileName: imageFileName)
+                                    item.imageName = imageFileName
+                                    bookItems.saveItem(item: item)
+                                } else {
+                                    print("no image")
+                                }
                             },
                             label: {
                                 Text("Submit")
