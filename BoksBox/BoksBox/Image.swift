@@ -10,7 +10,7 @@ import SwiftUI
 struct image: View {
     var body: some View {
         VStack{
-            Image("Loginimage").resizable().frame(width: 300,height: 300).padding(.bottom, 80)
+            Image("logoApp 1").resizable().frame(width: 250,height: 250).cornerRadius(55).padding(.bottom, 80)
         }
     }
 }

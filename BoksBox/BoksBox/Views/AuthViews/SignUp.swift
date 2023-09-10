@@ -7,8 +7,12 @@
 
 import SwiftUI
 import FirebaseAuth
+import RiveRuntime
 
 struct SignUpView: View {
+    @State var Rive : riveView?
+    @State var coloreror: Color = Color.red
+    @State var texteror: Text = Text("")
     @State var Enteryourname: String = "ger"
     @State var Email: String = ""
     @State var Password: String = ""
@@ -18,12 +22,42 @@ struct SignUpView: View {
     var body: some View {
         NavigationStack{
             VStack {
-                TextField("aa", text: $Email)
-                    .background(Color.red)
+//                TextField("aa", text: $Email)
+//                    .background(Color.red)
+                VStack {
+                    TextField(text:$Enteryourname){
+                        Text("Enter your name").foregroundColor(.white)
+                    }
+                    .padding(20).foregroundColor(.white).frame(width: 350,height: 50).background(Color.gray.opacity(0.6)).cornerRadius(10)
+                }.padding(.bottom)
+                VStack {
+                    TextField(text:$Email){
+                        Text("Email").foregroundColor(.white)
+                    }
+                    .padding(20).foregroundColor(.white).frame(width: 350,height: 50).background(Color.gray.opacity(0.6)).cornerRadius(10)
+                }.padding(.bottom)
+                VStack {
+                    TextField(text:$Password){
+                        Text("Password").foregroundColor(.white)
+                    }
+                    .padding(20).foregroundColor(.white).frame(width: 350,height: 50).background(Color.gray.opacity(0.6)).cornerRadius(10)
+                }.padding(.bottom)
+                VStack {
+                    TextField(text:$PasswordCorint){
+                        Text("Password Corint").foregroundColor(.white)
+                    }
+                    .padding(20).foregroundColor(.white).frame(width: 350,height: 50).background(Color.gray.opacity(0.6)).cornerRadius(10)
+                }.padding(.bottom)
+                VStack {
+                    TextField(text:$Username){
+                        Text("Username").foregroundColor(.white)
+                    }
+                    .padding(20).foregroundColor(.white).frame(width: 350,height: 50).background(Color.gray.opacity(0.6)).cornerRadius(10)
+                }.padding(.bottom)
                 
-                TextField("aa", text: $Password)
-                    .background(Color.red)
-//            CastomTextFild(Controlir: Enteryourname, text: "Enter your name").padding(.bottom)
+//                TextField("aa", text: $Password)
+//                    .background(Color.red)
+//           CastomTextFild(Controlir: Enteryourname, text: "Enter your name").padding(.bottom)
 //            CastomTextFild(Controlir: Email, text: "Email").padding(.bottom)
 //            CastomTextFild(Controlir: Password, text: "Password").padding(.bottom)
 //            CastomTextFild(Controlir: PasswordCorint, text: "Password Corint").padding(.bottom)
@@ -38,24 +72,31 @@ struct SignUpView: View {
 //
 //        }
             Button {
-                print("z")
-                createUser(username: Email, Password: Password)
+                print("ok")
+                createUser(username: Email, Password: Password,PasswordCorint:PasswordCorint)
             } label: {
-                Text("add")
+                textbuttunSignUp()
             }
 
             
             
               //  .padding(.top,20)
             
-            HStack{
-                Text("Already have an account? ").font(Font.headline).foregroundColor(.white).bold()
-                NavigationLink( destination: LogInView())
-                {
-                    Text("Log in").font(Font.system(size: 18)).bold()
-                }
-            }.padding(.top,40)
-       
+//            HStack{
+//                Text("Already have an account? ").font(Font.headline).foregroundColor(.white).bold()
+//                NavigationLink( destination: LogInView())
+//                {
+//                    Text("Log in").font(Font.system(size: 18)).bold()
+//                }
+//            }.padding(.top,40)
+                VStack{
+                    texteror.foregroundColor(coloreror)
+                  
+                    Rive
+                       
+                  
+                    
+                }.frame(maxWidth: 300,maxHeight:100)
 
         }.frame(width: 400,height: 900).background(LinearGradient(
             stops: [
@@ -67,12 +108,15 @@ struct SignUpView: View {
         ))
         .padding()
     }}
-    func createUser(username:String,Password:String){
+    func createUser(username:String,Password:String,PasswordCorint:String){
         Auth.auth().createUser(withEmail: username, password: Password){ok,error in
-            if error != nil{
-                print("hh")
+            if error == nil && Password == PasswordCorint{
+                coloreror = Color.green
+                Rive = riveView()
+                texteror = Text("Wellcom To \(Enteryourname)")
+                               print(" ok")
             } else{
-                print("hjf")
+                texteror = Text("Sorry, the password or email  is incorrect")
             }
         }
     }

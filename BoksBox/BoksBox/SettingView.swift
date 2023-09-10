@@ -62,7 +62,7 @@ struct ListView: View {
     
     let languages = ["Arabic", "English"]
     let modes = ["Light Mode", "Dark Mode"]
-    
+    @State var pagego:Bool = false
     var body: some View {
         List {
             Section(header: Text("Language")) {
@@ -94,13 +94,7 @@ struct ListView: View {
                     ))
                 }
             }
-            Button(action: {
-                Gwt().Token = ""
-            }, label: {
-                Section(header: Text("sing out")) {
-                 
-                }
-            })
+            
             
         }
     }

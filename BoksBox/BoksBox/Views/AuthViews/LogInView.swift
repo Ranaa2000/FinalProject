@@ -9,17 +9,25 @@ import SwiftUI
 import FirebaseAuth
 
 struct LogInView: View {
+    @State var texteror: Text = Text("")
     @State var Password: String = ""
     @State var Email: String = ""
     
     var body: some View {
         NavigationStack{ VStack {
             image()
-            TextField("aa", text: $Email)
-                .background(Color.red)
-            
-            TextField("aa", text: $Password)
-                .background(Color.red)
+            VStack {
+                TextField(text:$Email){
+                    Text("Email").foregroundColor(.white)
+                }
+                .padding(20).foregroundColor(.white).frame(width: 350,height: 50).background(Color.gray.opacity(0.6)).cornerRadius(10)
+            }.padding(.bottom)
+            VStack {
+                TextField(text:$Password){
+                    Text("Password").foregroundColor(.white)
+                }
+                .padding(20).foregroundColor(.white).frame(width: 350,height: 50).background(Color.gray.opacity(0.6)).cornerRadius(10)
+            }.padding(.bottom)
 //            CastomTextFild(Controlir: Email, text: "Enter your username/Gmail").padding(.bottom)
 //            CastomTextFild(Controlir: Password, text: "Password")
 //
@@ -37,6 +45,10 @@ struct LogInView: View {
                     Text("Sign Up").font(Font.system(size: 18)).bold()
                 }
             }.padding(.top,40)
+            HStack{
+                texteror.foregroundColor(.red)
+            }.padding(.top,10)
+
         }.frame(width: 400,height: 900).background(Colors().Backgroundcolor)
                 .padding()
         }}
@@ -49,7 +61,7 @@ struct LogInView: View {
                 print(" ok")
             }else
             {
-//                texteror = Text("Sorry, the password or email is incorrect")
+                texteror = Text("Sorry, the password or email is incorrect")
                 print("nit ok")
             }
 

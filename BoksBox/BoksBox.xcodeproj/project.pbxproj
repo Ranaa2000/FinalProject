@@ -23,6 +23,8 @@
 		3053719C2AA9C31800C4DA01 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3053719B2AA9C31800C4DA01 /* Token.swift */; };
 		3053719F2AADB00D00C4DA01 /* 113-173-loading-book.riv in Resources */ = {isa = PBXBuildFile; fileRef = 3053719E2AADB00D00C4DA01 /* 113-173-loading-book.riv */; };
 		305371A22AADB0A300C4DA01 /* RiveRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = 305371A12AADB0A300C4DA01 /* RiveRuntime */; };
+		305371A42AAE49AC00C4DA01 /* 327-628-checkmark-simple.riv in Resources */ = {isa = PBXBuildFile; fileRef = 305371A32AAE49AC00C4DA01 /* 327-628-checkmark-simple.riv */; };
+		305371A62AAE4D4700C4DA01 /* riveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305371A52AAE4D4700C4DA01 /* riveView.swift */; };
 		3074987F2AA8F902006C6E43 /* ListOfCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3074986D2AA8F902006C6E43 /* ListOfCards.swift */; };
 		307498802AA8F902006C6E43 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3074986E2AA8F902006C6E43 /* WelcomeView.swift */; };
 		307498822AA8F902006C6E43 /* CastomTextFild.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307498702AA8F902006C6E43 /* CastomTextFild.swift */; };
@@ -55,6 +57,8 @@
 		305371992AA9C2FE00C4DA01 /* ShicToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShicToken.swift; sourceTree = "<group>"; };
 		3053719B2AA9C31800C4DA01 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		3053719E2AADB00D00C4DA01 /* 113-173-loading-book.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = "113-173-loading-book.riv"; sourceTree = "<group>"; };
+		305371A32AAE49AC00C4DA01 /* 327-628-checkmark-simple.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = "327-628-checkmark-simple.riv"; sourceTree = "<group>"; };
+		305371A52AAE4D4700C4DA01 /* riveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = riveView.swift; sourceTree = "<group>"; };
 		3074986D2AA8F902006C6E43 /* ListOfCards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfCards.swift; sourceTree = "<group>"; };
 		3074986E2AA8F902006C6E43 /* WelcomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		307498702AA8F902006C6E43 /* CastomTextFild.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CastomTextFild.swift; sourceTree = "<group>"; };
@@ -69,7 +73,7 @@
 		3074987B2AA8F902006C6E43 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		3074987C2AA8F902006C6E43 /* textbuttum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = textbuttum.swift; sourceTree = "<group>"; };
 		3074987E2AA8F902006C6E43 /* Fivoret.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fivoret.swift; sourceTree = "<group>"; };
-		3090DD6C2AA8C7800088C89E /* BoksBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoksBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3090DD6C2AA8C7800088C89E /* BooksBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BooksBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3090DD6F2AA8C7800088C89E /* BoksBoxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoksBoxApp.swift; sourceTree = "<group>"; };
 		3090DD732AA8C7820088C89E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3090DD762AA8C7820088C89E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -114,6 +118,7 @@
 			children = (
 				307498712AA8F902006C6E43 /* SignUp.swift */,
 				307498742AA8F902006C6E43 /* LogInView.swift */,
+				305371A52AAE4D4700C4DA01 /* riveView.swift */,
 			);
 			path = AuthViews;
 			sourceTree = "<group>";
@@ -161,6 +166,7 @@
 		3053719D2AADAFFC00C4DA01 /* Rive */ = {
 			isa = PBXGroup;
 			children = (
+				305371A32AAE49AC00C4DA01 /* 327-628-checkmark-simple.riv */,
 				3053719E2AADB00D00C4DA01 /* 113-173-loading-book.riv */,
 			);
 			path = Rive;
@@ -177,7 +183,7 @@
 		3090DD6D2AA8C7800088C89E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3090DD6C2AA8C7800088C89E /* BoksBox.app */,
+				3090DD6C2AA8C7800088C89E /* BooksBox.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -215,9 +221,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3090DD6B2AA8C7800088C89E /* BoksBox */ = {
+		3090DD6B2AA8C7800088C89E /* BooksBox */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3090DD7A2AA8C7820088C89E /* Build configuration list for PBXNativeTarget "BoksBox" */;
+			buildConfigurationList = 3090DD7A2AA8C7820088C89E /* Build configuration list for PBXNativeTarget "BooksBox" */;
 			buildPhases = (
 				3090DD682AA8C7800088C89E /* Sources */,
 				3090DD692AA8C7800088C89E /* Frameworks */,
@@ -227,7 +233,7 @@
 			);
 			dependencies = (
 			);
-			name = BoksBox;
+			name = BooksBox;
 			packageProductDependencies = (
 				2B4EEC5C2AABA0BA00169F2B /* FirebaseAnalytics */,
 				2B4EEC5E2AABA0BA00169F2B /* FirebaseAnalyticsWithoutAdIdSupport */,
@@ -238,7 +244,7 @@
 				305371A12AADB0A300C4DA01 /* RiveRuntime */,
 			);
 			productName = BoksBox;
-			productReference = 3090DD6C2AA8C7800088C89E /* BoksBox.app */;
+			productReference = 3090DD6C2AA8C7800088C89E /* BooksBox.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -273,7 +279,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3090DD6B2AA8C7800088C89E /* BoksBox */,
+				3090DD6B2AA8C7800088C89E /* BooksBox */,
 			);
 		};
 /* End PBXProject section */
@@ -286,6 +292,7 @@
 				2B4EEC692AABA1BD00169F2B /* GoogleService-Info.plist in Resources */,
 				3090DD772AA8C7820088C89E /* Preview Assets.xcassets in Resources */,
 				3090DD742AA8C7820088C89E /* Assets.xcassets in Resources */,
+				305371A42AAE49AC00C4DA01 /* 327-628-checkmark-simple.riv in Resources */,
 				3053719F2AADB00D00C4DA01 /* 113-173-loading-book.riv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,6 +324,7 @@
 				305371962AA90C5400C4DA01 /* vm.swift in Sources */,
 				3074988C2AA8F903006C6E43 /* CardDetails.swift in Sources */,
 				FAFE77BF2AA9E36E00F81EA7 /* SettingView.swift in Sources */,
+				305371A62AAE4D4700C4DA01 /* riveView.swift in Sources */,
 				3074988E2AA8F903006C6E43 /* textbuttum.swift in Sources */,
 				307498852AA8F903006C6E43 /* TabView.swift in Sources */,
 				FAFE77BB2AA9E20F00F81EA7 /* NewPost.swift in Sources */,
@@ -512,7 +520,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3090DD7A2AA8C7820088C89E /* Build configuration list for PBXNativeTarget "BoksBox" */ = {
+		3090DD7A2AA8C7820088C89E /* Build configuration list for PBXNativeTarget "BooksBox" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3090DD7B2AA8C7820088C89E /* Debug */,

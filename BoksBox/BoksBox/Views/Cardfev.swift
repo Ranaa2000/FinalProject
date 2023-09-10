@@ -8,70 +8,75 @@
 
 
 import SwiftUI
+import FirebaseStorage
 
-struct Cardfev: View {
-    @EnvironmentObject var vm: Vm
-    @EnvironmentObject var bookItems: BookItemsViewModel
 
-    var image:String = "a2"
-    var titil:String = "Book Tiltle"
-    var icon:String = "heart"
-    var body: some View {
+    struct Cardfev: View {
+        @EnvironmentObject var vm: Vm
+        @EnvironmentObject var bookItems: BookItemsViewModel
+        let storageRef = Storage.storage().reference()
+        @State var item: BookItem
+        var icon: String = "heart.fill"
         
+        @State var imageUrl: URL = URL(string: "https://placehold.co/400")!
         
-        
-        
-        VStack{
-            
-            NavigationLink {
-                ShowDetailsView()
-            } label: {
-                VStack{
+        var body: some View {
+            VStack{
+                NavigationLink {
+                    ShowDetailsView(description: item.author, bookType: item.country, Bookname: item.title, image: imageUrl)
+                } label: {
                     VStack {
-                        Image(image).resizable().frame(width: 140,height: 175)
-                        HStack{
-                            Text(titil)
-                                Spacer()
-                        }.frame(width: 135,height: 20)
-                        HStack{
-                            VStack{
-                                
-                                
-                                HStack{
-                                    Text("bisnis ")
-                                    Spacer()
-                                  
+                        VStack{
+                            AsyncImage(
+                                url: imageUrl,
+                                content: { image in
+                                    image.resizable().cornerRadius(10)
+    //                                    .aspectRatio(contentMode: .fit)
+                                        .frame(width: 145, height: 185 )
+                                },
+                                placeholder: {
+                                    ProgressView()
                                 }
-                                HStack{
-                                    Text("Riyadh ")
-                                    Spacer()
-                                }
-                                
-                            }.frame(width: 104)
-                            Button(action: {
-                                
-//                                vm.vm(newbook: Bookmodel(titel: titil,image: image,icon: "heart.fill"))
-                            }, label: {
-                                Image(systemName: icon).resizable().foregroundColor(.red).frame(width: 25,height: 23)
-                            })
+                            )
+                            
+                        }.frame(width: 145,height: 185).background(Color.gray.opacity(0.3)).cornerRadius(10).padding(.top,4)
+                        HStack{
+                            Text(item.title)
+                            Spacer()
                         }
-                    }.frame(width: 140)
-                        .padding(10)
-                }.background(Color.white).cornerRadius(20)
-            
-            }.foregroundColor(.black)
-            
-            
-            
-            
-            
+                        .frame(width: 135, height: 20)
+                        HStack {
+                            VStack{
+                                HStack{
+                                    Text(item.country)
+                                        .font(.system(size: 13))
+                                }
+                            }
+                            .frame(width: 104)
+                         
+                                Image(systemName: icon).resizable().foregroundColor(.red).frame(width: 25,height: 23)
+                           
+                        }
+                        .padding(.bottom, 10)
+                    }
+                    .frame(width: 160,height: 270)
+                    .background(Color.white.opacity(0.859))
+                    .cornerRadius(20).padding(.top,16)
+                }
+                .foregroundColor(.black)
+            }
+            .onAppear() {
+                let path = storageRef.child(item.imageName)
+                // Fetch the download URL
+                path.downloadURL { url, error in
+                    if let error = error {
+                        print("\(item.imageName) not found")
+                        print(error)
+                    }
+                    if let url = url {
+                        imageUrl = url
+                    }
+                }
+            }
         }
-    }}
-
-struct Cardfev_Previews: PreviewProvider {
-    static var previews: some View {
-        Cardfev()
     }
-}
-
-

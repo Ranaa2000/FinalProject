@@ -62,11 +62,21 @@ struct Profile: View {
                             .cornerRadius(350)
                         //.padding()
                         // Spacer()
-                        Text("User Name")
-                            .foregroundColor(.white)
-                            .font(.system(size: 30))
-                            .bold()
-                        
+                        HStack  {
+                            Button(action: {
+                                print("waleed")
+                            }, label: {
+                                Image(systemName: "pencil")
+                                    .resizable()
+                                    .frame(width: 22,height: 25)
+                                    .foregroundColor(.white)
+                            })
+                            Text("User Name")
+                                .foregroundColor(.white)
+                                .font(.system(size: 30))
+                                .bold()
+                            
+                        }
                         Spacer(minLength: 40)
                         Text("My Advertisements")
                             .foregroundColor(.white)
@@ -99,22 +109,25 @@ struct Profile: View {
                     ToolbarItem() { // <3>
                         HStack{
                             
-                            Button(action: {
-                                print("waleed")
-                            }, label: {
-                                Image(systemName: "pencil")
-                                        .resizable()
-                                        .frame(width: 35,height: 35)
-                                        .foregroundColor(.white)
-                            })
+                          
                            
-                            
+                            Button(action: {
+                               
+                            }, label: {
+                                NavigationLink(destination: SettingView()) {
+                                    Image(systemName: "gearshape.2")
+                                        .resizable()
+                                        .frame(width: 45, height: 35)
+                                        .foregroundColor(.white)
+                                }
+                            })
+
                             Spacer()
-                            
-                            Text("profile")
-                                .foregroundColor(.white)
-                                .font(.system(size: 40))
-                                .bold()
+//
+//                            Text("profile")
+//                                .foregroundColor(.white)
+//                                .font(.system(size: 40))
+//                                .bold()
                             Spacer()
                             
                      
@@ -127,17 +140,13 @@ struct Profile: View {
 //                                        .frame(width: 35,height: 35)
 //                                        .foregroundColor(.white)
 //
-//                            })
-                            Button(action: {
-                               
-                            }, label: {
-                                NavigationLink(destination: SettingView()) {
-                                    Image(systemName: "gearshape.2")
-                                        .resizable()
-                                        .frame(width: 35, height: 35)
-                                        .foregroundColor(.white)
-                                }
-                            })
+                         
+                            Button(
+                                action: {
+                                    Gwt().Token = ""
+                                }, label: {
+                                    Image("Image").resizable().foregroundColor(.white).frame(width: 25,height: 35)
+                                })
                            
                         }.frame(width: 380)
                         

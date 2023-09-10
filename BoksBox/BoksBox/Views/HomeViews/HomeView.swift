@@ -37,9 +37,10 @@ struct HomeView: View {
                     HStack{
                         Text("Home")
                             .foregroundColor(.white)
-                            .font(.system(size: 28))
+                            .font(.system(size: 35))
                         
                             .bold()
+                        
                     }.frame(width: 380)
                     
                     

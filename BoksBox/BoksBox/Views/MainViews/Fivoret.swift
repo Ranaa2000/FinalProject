@@ -21,28 +21,35 @@ struct FavoriteView: View {
         
     ]
     var body: some View {
-        NavigationStack{
+        NavigationView{
             VStack {
-              
+                Text("")
                 HStack{
                     Text("")
+                     
+                        
                 }
-                
+
                 ScrollView(){
                     LazyVGrid(columns: columns, spacing: 10) {
+                    
                         ForEach(vm.arr, id: \.self) { item in
-                            CardDetails(item: item,
+                            Cardfev(item: item,
                                          icon:"heart.fill")
-                        }.onDelete { (indexSet) in
-                            self.vm.arr.remove(atOffsets: indexSet)
-                            }
+                            
+                           
+                             
+                                // Can't get index, so this won't work
+                               
                         }
+                        }
+              
                     }
                     .padding(.horizontal).padding(.top,110)
                 }
                             
                 
-            }.frame(maxWidth: .infinity,maxHeight: .infinity).background(LinearGradient(
+            .frame(maxWidth: .infinity,maxHeight: .infinity).background(LinearGradient(
                 stops: [
                     Gradient.Stop(color: Color(red: 0.06, green: 0.19, blue: 0.34), location: 0.08),
                     Gradient.Stop(color: Color(red: 0.3, green: 0.42, blue: 0.45), location: 0.92),
@@ -53,18 +60,18 @@ struct FavoriteView: View {
                 .toolbar { // <2>
                     ToolbarItem() { // <3>
                         HStack{
-                        
+                            
                             Text("Favorite")
                                 .foregroundColor(.white)
                                 .font(.system(size: 40))
                                 .bold()
-                           
-                
-                          
-                           
+                            
+                            
+                            
+                            
                         }.frame(width: 380)
                         
-                        
+                    }
                     }
                 }
 

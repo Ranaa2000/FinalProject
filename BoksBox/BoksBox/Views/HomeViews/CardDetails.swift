@@ -20,44 +20,47 @@ struct CardDetails: View {
     var body: some View {
         VStack{
             NavigationLink {
-                ShowDetailsView()
+                ShowDetailsView(description: item.author, bookType: item.country, Bookname: item.title, image: imageUrl)
             } label: {
                 VStack {
-                    AsyncImage(
-                        url: imageUrl,
-                        content: { image in
-                            image.resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(maxWidth: .infinity, maxHeight: 175)
-                        },
-                        placeholder: {
-                            ProgressView()
-                        }
-                    )
-                    .padding(.top, 10)
+                    VStack{
+                        AsyncImage(
+                            url: imageUrl,
+                            content: { image in
+                                image.resizable().cornerRadius(10)
+//                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 145, height: 185 )
+                            },
+                            placeholder: {
+                                ProgressView()
+                            }
+                        )
+                        
+                    }.frame(width: 145,height: 185).background(Color.gray.opacity(0.3)).cornerRadius(10).padding(.top,4)
                     HStack{
                         Text(item.title)
+                        Spacer()
                     }
                     .frame(width: 135, height: 20)
                     HStack {
                         VStack{
                             HStack{
                                 Text(item.country)
-                                    .font(.system(size: 10))
+                                    .font(.system(size: 13))
                             }
                         }
                         .frame(width: 104)
                         Button(action: {
                             vm.vm(newbook: item)
                         }, label: {
-                            Image(systemName: icon).resizable().foregroundColor(.red).frame(width: 25,height: 23)
+                            Image(systemName: icon).resizable().frame(width: 25,height: 23)
                         })
                     }
                     .padding(.bottom, 10)
                 }
-                .frame(width: 140)
-                .background(Color.white)
-                .cornerRadius(20)
+                .frame(width: 160,height: 270)
+                .background(Color.white.opacity(0.859))
+                .cornerRadius(20).padding(.top,16)
             }
             .foregroundColor(.black)
         }

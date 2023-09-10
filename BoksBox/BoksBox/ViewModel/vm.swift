@@ -19,8 +19,9 @@ class Vm: ObservableObject{
         print("\(arr)")
     }
     
-    func deleteItems(at offsets: IndexSet) {
+   
+    func deleteItem(at offsets: IndexSet) {
         arr.remove(atOffsets: offsets)
-    }
+        }
     
 }

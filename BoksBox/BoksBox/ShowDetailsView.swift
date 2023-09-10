@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct ShowDetailsView: View {
-    var description: String = "Book description blaa blaaa blaaa jhjhjghjghjgvhjghjfgjh"
-    var bookType : String = "Book type"
-    var city :String = "Jeddah"
-    var phoneNum :Int = 0
-    
+    var description: String 
+    var bookType : String
+   
+   
+    var Bookname:String
+    var image: URL
     var body: some View {
         //        VStack{
         //
@@ -42,15 +43,26 @@ struct ShowDetailsView: View {
             
             HStack{
                 
-                Image("a2" ).resizable()
-                    
-                    .frame( width: 180,height: 250).padding()
-               
                 VStack{
-                    Text("Book name")
+                    AsyncImage(
+                        url: image,
+                        content: { image in
+                            image.resizable().cornerRadius(10)
+    //                                    .aspectRatio(contentMode: .fit)
+                                .frame( width: 180,height: 250)
+                        },
+                        placeholder: {
+                            ProgressView()
+                        }
+                    )
+                }.frame( width: 180,height: 250).background(Color.gray.opacity(0.3)).cornerRadius(10).padding()
+                            
+                    
+                VStack{
+                    Text(Bookname)
                         
                         .font(
-                            Font.custom("Crimson Text", size: 30)
+                            Font.custom("Crimson Text", size: 20)
                                 .weight(.bold)
                                 
                         )
@@ -59,7 +71,7 @@ struct ShowDetailsView: View {
                         .frame(width: 180, height: 65, alignment: .topLeading)
                     
                     
-                    Text("Educational")
+                    Text(bookType)
                     
                         .foregroundColor(.white)
                         .font(
@@ -95,21 +107,23 @@ struct ShowDetailsView: View {
                 .foregroundColor(.white)
                 .frame(width: 300, height: 65, alignment: .topLeading)
             
+            VStack{
             
-            Text("Comunication : ")
-                .foregroundColor(.white)
-                .padding(.top, 2)
-                .font(
-                    Font.custom("Crimson Text", size: 25)
-                        .weight(.bold)
-                )
-                .frame(width: 300, height: 65, alignment: .topLeading)
-            
-            Text("Phone : 055555555")
-                .foregroundColor(.white)
-                .frame(width: 300, height: 65, alignment: .topLeading)
-            
-            
+                Text("Comunication : ")
+                    .foregroundColor(.white)
+                    .padding(.top, 2)
+                    .font(
+                        Font.custom("Crimson Text", size: 20)
+                            .weight(.bold)
+                    )
+                    .frame(width: 300, height: 65, alignment: .bottomLeading)
+                
+                Text("Phone : 055555555")
+                    .foregroundColor(.white)
+                    .frame(width: 300, height: 65, alignment: .bottomLeading)
+                
+                
+            }.frame(width: 300, height: 130, alignment: .bottomLeading).padding(.top,100)
         }
         .frame(maxWidth: .infinity , maxHeight: .infinity)
         .background(
@@ -126,8 +140,4 @@ struct ShowDetailsView: View {
     }
 }
 
-struct ShowDetailsView_Previews: PreviewProvider {
-    static var previews: some View {
-        ShowDetailsView()
-    }
-}
+
