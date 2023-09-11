@@ -40,7 +40,7 @@ struct Profile: View {
     ]
     
     var body: some View {
-        NavigationView{
+        
             VStack{
             ScrollView{
                 
@@ -171,7 +171,7 @@ struct Profile: View {
                 )
             ))
             
-        }
+        
     }
 }
 struct Profile_Previews: PreviewProvider {

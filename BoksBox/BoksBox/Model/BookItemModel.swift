@@ -10,6 +10,7 @@ import FirebaseDatabase
 
 // MARK: Book Item definition according to firebase database
 struct BookItem: Hashable {
+    let id = UUID()
     let ref: DatabaseReference?
     var author: String
     var country: String

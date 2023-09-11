@@ -13,34 +13,39 @@ import UIKit
 var te:String = "choose an image"
 
 struct PlaceholderTextField: View {
+    
     var placeholder: String
     @Binding var text: String
     
     var body: some View {
-        ZStack(alignment: .leading) {
-            if text.isEmpty {
-                Text(placeholder)
-                    .foregroundColor(.white.opacity(0.5))
-                    .padding(.horizontal, 16)
+       
+     
+            ZStack(alignment: .leading) {
+                if text.isEmpty {
+                    Text(placeholder)
+                        .foregroundColor(.white.opacity(0.5))
+                        .padding(.horizontal, 16)
+                }
+                
+                TextField("", text: $text)
+                    .foregroundColor(.white)
+                    .padding(20)
+                    .frame(height: 65)
+                    .background(Color.clear)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 16)
+                            .stroke(Color.white, lineWidth: 2)
+                    )
             }
-            
-            TextField("", text: $text)
-                .foregroundColor(.white)
-                .padding(20)
-                .frame(height: 65)
-                .background(Color.clear)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 16)
-                        .stroke(Color.white, lineWidth: 2)
-                )
-        }
+        
     }
 }
 
 struct NewPost: View {
     @State private var selectedImage: UIImage?
     @State private var isShowingImagePicker = false
-    
+    @State var pushpage: Bool = false
+    @State var rivechec: checRive?
     @State private var pagesText = ""
     @State private var yearText = ""
     @State private var item: BookItem = BookItem()
@@ -51,8 +56,10 @@ struct NewPost: View {
     let bookQuality = ["Good Quality", "Medium Quality", "Low Quality"]
     
     var body: some View {
-        NavigationView{
+        
+         
             VStack{
+                rivechec
                 ScrollView{
                     VStack {
                         // Book Title
@@ -173,7 +180,7 @@ struct NewPost: View {
                         
                         Button(action: {
                             isShowingImagePicker = true
-                            te = ""
+                           
                         }) {
                             if isShowingImagePicker == false{
                                 Text("\(te)")
@@ -189,6 +196,7 @@ struct NewPost: View {
                         
                         Button(
                             action: {
+                                
                                 print("New post")
                                 let pages = Int(pagesText) ?? 1
                                 let year = Int(yearText) ?? 2020
@@ -199,13 +207,25 @@ struct NewPost: View {
                                     bookItems.uploadImage(selectedImage: imageData, imageFileName: imageFileName)
                                     item.imageName = imageFileName
                                     bookItems.saveItem(item: item)
+                                    rivechec = checRive()
+                                    pushpage = true
+                                    
                                 } else {
                                     print("no image")
                                 }
+                            
                             },
                             label: {
-                                Text("Submit")
-                                .foregroundColor(.white)
+//                                NavigationLink {
+//                                    checRive()
+//                                } label: {
+                                    
+                                    
+                                    
+                                    Text("Submit")
+                                        .foregroundColor(.white)
+                               // }
+                            
                             }
                         )
                         .padding()
@@ -244,7 +264,7 @@ struct NewPost: View {
                 }
             }
             
-        }
+        
     }
 }
 struct ImagePicker: UIViewControllerRepresentable {

@@ -14,7 +14,7 @@ struct LogInView: View {
     @State var Email: String = ""
     
     var body: some View {
-        NavigationStack{ VStack {
+         VStack {
             image()
             VStack {
                 TextField(text:$Email){
@@ -51,7 +51,7 @@ struct LogInView: View {
 
         }.frame(width: 400,height: 900).background(Colors().Backgroundcolor)
                 .padding()
-        }}
+        }
     func signIn(username:String,Password:String){
         Auth.auth().signIn(withEmail: username, password: Password){ok,erorr
             in

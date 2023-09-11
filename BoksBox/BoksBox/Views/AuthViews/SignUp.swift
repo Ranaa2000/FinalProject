@@ -20,7 +20,7 @@ struct SignUpView: View {
     @State var Username: String = ""
     var f : String = "Enter your username/Gmail"
     var body: some View {
-        NavigationStack{
+      
             VStack {
 //                TextField("aa", text: $Email)
 //                    .background(Color.red)
@@ -107,7 +107,7 @@ struct SignUpView: View {
             endPoint: UnitPoint(x: 0.5, y: 1)
         ))
         .padding()
-    }}
+    }
     func createUser(username:String,Password:String,PasswordCorint:String){
         Auth.auth().createUser(withEmail: username, password: Password){ok,error in
             if error == nil && Password == PasswordCorint{

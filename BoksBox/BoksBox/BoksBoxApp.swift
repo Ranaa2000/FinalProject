@@ -26,12 +26,14 @@ struct BoksBoxApp: App {
     @ObservedObject var vm = Vm()
     @ObservedObject var bookItems = BookItemsViewModel()
     var body: some Scene {
+        
         WindowGroup {
-          
-                WelcomeView()
+            NavigationView{
+                
+               WelcomeView()
                     .environmentObject(vm)
                     .environmentObject(bookItems)
-            
+            }
         }
     }
 }

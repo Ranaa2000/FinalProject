@@ -17,6 +17,7 @@ import FirebaseStorage
         let storageRef = Storage.storage().reference()
         @State var item: BookItem
         var icon: String = "heart.fill"
+      
         
         @State var imageUrl: URL = URL(string: "https://placehold.co/400")!
         
@@ -54,7 +55,13 @@ import FirebaseStorage
                             }
                             .frame(width: 104)
                          
-                                Image(systemName: icon).resizable().foregroundColor(.red).frame(width: 25,height: 23)
+                            Button(action: {
+                                print("deleting item at")
+                               
+//                                vm.deleteItem(item)
+                            }, label: {
+                                    Image(systemName: icon).resizable().foregroundColor(.red).frame(width: 25,height: 23)
+                                })
                            
                         }
                         .padding(.bottom, 10)

@@ -13,10 +13,10 @@ struct CardDetails: View {
     @EnvironmentObject var bookItems: BookItemsViewModel
     let storageRef = Storage.storage().reference()
     @State var item: BookItem
-    var icon: String = "heart"
-    
+    @State var icon: String = "heart"
+    @State var coloricon: Color = .black
     @State var imageUrl: URL = URL(string: "https://placehold.co/400")!
-    
+    @State var con: Int = 0
     var body: some View {
         VStack{
             NavigationLink {
@@ -51,9 +51,18 @@ struct CardDetails: View {
                         }
                         .frame(width: 104)
                         Button(action: {
-                            vm.vm(newbook: item)
+                             
+                          if con == 0
+                            {
+                          
+                                coloricon = .red
+                                icon = "heart.fill"
+                                vm.vm(newbook: item)
+                                
+                          }
+                            con += 1
                         }, label: {
-                            Image(systemName: icon).resizable().frame(width: 25,height: 23)
+                            Image(systemName: icon).resizable().frame(width: 25,height: 23).foregroundColor(coloricon)
                         })
                     }
                     .padding(.bottom, 10)

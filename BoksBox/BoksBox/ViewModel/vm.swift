@@ -20,8 +20,18 @@ class Vm: ObservableObject{
     }
     
    
-    func deleteItem(at offsets: IndexSet) {
-        arr.remove(atOffsets: offsets)
+//    func deleteItem(at index: Int) {
+//        print(index)
+//        print("BEFORE", arr.map(\.title))
+//        arr.remove(at: index)
+//        print("AFTER", arr.map(\.title))
+//    }
+//
+//    func deleteItem(_ item: BookItem) {
+//        arr.removeAll(where: { $0.id == item.id })
+//    }
+    func deleteItem(_ i : Int){
+    arr.remove(at: i)
         }
-    
+
 }

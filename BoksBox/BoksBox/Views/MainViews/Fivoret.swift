@@ -14,41 +14,42 @@ var texwt:Array<String> = ["a1"," a1"]
 struct FavoriteView: View {
     @EnvironmentObject var vm: Vm
     @EnvironmentObject var bookItems: BookItemsViewModel
-
+    
     let columns = [
         GridItem(.flexible()),
         GridItem(.flexible())
         
     ]
     var body: some View {
-        NavigationView{
+       
             VStack {
                 Text("")
                 HStack{
                     Text("")
-                     
-                        
+                    
+                    
                 }
-
+                
                 ScrollView(){
                     LazyVGrid(columns: columns, spacing: 10) {
-                    
-                        ForEach(vm.arr, id: \.self) { item in
-                            Cardfev(item: item,
-                                         icon:"heart.fill")
-                            
+                        
+                        ForEach(vm.arr,id: \.self) { index in
+                            Cardfev(item: index,
+                                    icon:"heart.fill"
+                                    )
                            
-                             
-                                // Can't get index, so this won't work
-                               
-                        }
-                        }
-              
-                    }
-                    .padding(.horizontal).padding(.top,110)
-                }
                             
-                
+                            
+                            // Can't get index, so this won't work
+                            
+                        }
+                    }
+                    
+                }
+                .padding(.horizontal).padding(.top,110)
+            }
+            
+            
             .frame(maxWidth: .infinity,maxHeight: .infinity).background(LinearGradient(
                 stops: [
                     Gradient.Stop(color: Color(red: 0.06, green: 0.19, blue: 0.34), location: 0.08),
@@ -72,9 +73,11 @@ struct FavoriteView: View {
                         }.frame(width: 380)
                         
                     }
-                    }
                 }
-
-        }    }
+        
+        
+    }
+    
+}
 
 

@@ -10,7 +10,7 @@ import SwiftUI
 struct HomeView: View {
 
     var body: some View {
-        NavigationView {
+       
             VStack{
                 // to view books
                 ScrollView{
@@ -46,7 +46,7 @@ struct HomeView: View {
                     
                 }
             }
-        }
+        
         
     }
 }

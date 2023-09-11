@@ -25,6 +25,9 @@
 		305371A22AADB0A300C4DA01 /* RiveRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = 305371A12AADB0A300C4DA01 /* RiveRuntime */; };
 		305371A42AAE49AC00C4DA01 /* 327-628-checkmark-simple.riv in Resources */ = {isa = PBXBuildFile; fileRef = 305371A32AAE49AC00C4DA01 /* 327-628-checkmark-simple.riv */; };
 		305371A62AAE4D4700C4DA01 /* riveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305371A52AAE4D4700C4DA01 /* riveView.swift */; };
+		305371A82AAF001900C4DA01 /* checRive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305371A72AAF001900C4DA01 /* checRive.swift */; };
+		305371AA2AAF008700C4DA01 /* 1247-2400-check-icon.riv in Resources */ = {isa = PBXBuildFile; fileRef = 305371A92AAF008700C4DA01 /* 1247-2400-check-icon.riv */; };
+		305371C82AAF69C300C4DA01 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305371C72AAF69C300C4DA01 /* SwiftUIView.swift */; };
 		3074987F2AA8F902006C6E43 /* ListOfCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3074986D2AA8F902006C6E43 /* ListOfCards.swift */; };
 		307498802AA8F902006C6E43 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3074986E2AA8F902006C6E43 /* WelcomeView.swift */; };
 		307498822AA8F902006C6E43 /* CastomTextFild.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307498702AA8F902006C6E43 /* CastomTextFild.swift */; };
@@ -59,6 +62,9 @@
 		3053719E2AADB00D00C4DA01 /* 113-173-loading-book.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = "113-173-loading-book.riv"; sourceTree = "<group>"; };
 		305371A32AAE49AC00C4DA01 /* 327-628-checkmark-simple.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = "327-628-checkmark-simple.riv"; sourceTree = "<group>"; };
 		305371A52AAE4D4700C4DA01 /* riveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = riveView.swift; sourceTree = "<group>"; };
+		305371A72AAF001900C4DA01 /* checRive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checRive.swift; sourceTree = "<group>"; };
+		305371A92AAF008700C4DA01 /* 1247-2400-check-icon.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = "1247-2400-check-icon.riv"; sourceTree = "<group>"; };
+		305371C72AAF69C300C4DA01 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		3074986D2AA8F902006C6E43 /* ListOfCards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfCards.swift; sourceTree = "<group>"; };
 		3074986E2AA8F902006C6E43 /* WelcomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		307498702AA8F902006C6E43 /* CastomTextFild.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CastomTextFild.swift; sourceTree = "<group>"; };
@@ -108,7 +114,9 @@
 				307498732AA8F902006C6E43 /* TabView.swift */,
 				2BD2364B2AACCC0100E29EAB /* SearchView.swift */,
 				FAFE77BA2AA9E20F00F81EA7 /* NewPost.swift */,
+				305371C72AAF69C300C4DA01 /* SwiftUIView.swift */,
 				FAFE77BC2AA9E32100F81EA7 /* Profile.swift */,
+				305371A72AAF001900C4DA01 /* checRive.swift */,
 			);
 			path = MainViews;
 			sourceTree = "<group>";
@@ -168,6 +176,7 @@
 			children = (
 				305371A32AAE49AC00C4DA01 /* 327-628-checkmark-simple.riv */,
 				3053719E2AADB00D00C4DA01 /* 113-173-loading-book.riv */,
+				305371A92AAF008700C4DA01 /* 1247-2400-check-icon.riv */,
 			);
 			path = Rive;
 			sourceTree = "<group>";
@@ -294,6 +303,7 @@
 				3090DD742AA8C7820088C89E /* Assets.xcassets in Resources */,
 				305371A42AAE49AC00C4DA01 /* 327-628-checkmark-simple.riv in Resources */,
 				3053719F2AADB00D00C4DA01 /* 113-173-loading-book.riv in Resources */,
+				305371AA2AAF008700C4DA01 /* 1247-2400-check-icon.riv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +323,7 @@
 				305371982AA9B7E600C4DA01 /* Cardfev.swift in Sources */,
 				307498822AA8F902006C6E43 /* CastomTextFild.swift in Sources */,
 				2BD2364C2AACCC0100E29EAB /* SearchView.swift in Sources */,
+				305371A82AAF001900C4DA01 /* checRive.swift in Sources */,
 				307498872AA8F903006C6E43 /* HomeView.swift in Sources */,
 				2B5475462AACA98200CA1A72 /* BookItemsViewModel.swift in Sources */,
 				3090DD702AA8C7800088C89E /* BoksBoxApp.swift in Sources */,
@@ -325,6 +336,7 @@
 				3074988C2AA8F903006C6E43 /* CardDetails.swift in Sources */,
 				FAFE77BF2AA9E36E00F81EA7 /* SettingView.swift in Sources */,
 				305371A62AAE4D4700C4DA01 /* riveView.swift in Sources */,
+				305371C82AAF69C300C4DA01 /* SwiftUIView.swift in Sources */,
 				3074988E2AA8F903006C6E43 /* textbuttum.swift in Sources */,
 				307498852AA8F903006C6E43 /* TabView.swift in Sources */,
 				FAFE77BB2AA9E20F00F81EA7 /* NewPost.swift in Sources */,
