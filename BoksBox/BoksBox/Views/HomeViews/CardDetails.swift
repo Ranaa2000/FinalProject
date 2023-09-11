@@ -59,7 +59,7 @@ struct CardDetails: View {
                     .padding(.bottom, 10)
                 }
                 .frame(width: 160,height: 270)
-                .background(Color.white.opacity(0.859))
+                .background(Color.white.opacity(0.759))
                 .cornerRadius(20).padding(.top,16)
             }
             .foregroundColor(.black)

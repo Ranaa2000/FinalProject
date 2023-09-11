@@ -4,7 +4,6 @@
 //
 //  Created by الوليد خشيم on 21/02/1445 AH.
 //
-
 import SwiftUI
 import FirebaseCore
 import FirebaseAuth
