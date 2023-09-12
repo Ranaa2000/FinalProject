@@ -1,0 +1,59 @@
+/*
+  Localizable.strings
+  BoksBox
+
+  Created by TAHANI AL ONEAZAN on 11/09/2023.
+  
+*/
+/*
+  Localizable.strings
+  localization
+
+  Created by TAHANI AL ONEAZAN on 07/09/2023.
+  
+*/
+
+
+// home
+"all"="الكل";
+"educational"="تعليمي";
+"cultural"="ثقافي";
+"novel"="روايات";
+"other:"="غيره";
+
+
+
+//sign up
+"name"="ادخل الاسم";
+"email"="الايميل";
+"password"="الرقم السري";
+"passwod1"="تأكيد الرقم السري";
+"user"="اسم المستخدم";
+"sign"="تسجيل جديد";
+"have account"="لديك حساب بالفعل";
+"log"="تسجيل الدخول";
+
+
+// login
+"enter"= "ادخل الايميل";
+"pass"="الرقم السري";
+"log1"="تسجيل الدخول";
+"have"="ليس لديك حساب؟";
+"sign1"="تسجيل جديد";
+
+// new book
+"New"="اضف كتابك";
+"title"="العنوان";
+"author"="الكاتب";
+"country"="المدينه";
+"language"="اللغه";
+"page"="عدد الصفحات";
+"year"="السنه";
+"image"="اختر الصوره";
+"sub"="ارفاق";
+
+//home
+"home"="الرئيسيه";
+
+//favorite
+"favorite"="كتب تفضلها";

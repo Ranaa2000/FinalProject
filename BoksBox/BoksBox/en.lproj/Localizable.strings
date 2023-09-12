@@ -1,0 +1,61 @@
+
+
+// home
+"all"="All";
+"educational"="Educational";
+"cultural"="Cultural";
+"novel"="Novel";
+"other:"="Other";
+
+
+//book detail
+//"book name" : "Book Name";
+//"book classifaction" : "Book Classifaction"
+
+
+//sign up
+"name"="Enter your name";
+"email"="Email";
+"password"="Password";
+"passwod1"="confirm password";
+"user"="UserName";
+"sign"="Sign Up";
+"have account"="Already have account";
+"log"="Login";
+
+
+// login
+
+"enter"="Enter your email";
+"pass"="password";
+"log1"="Login";
+"have"="Don't have an account?";
+"sign1"="Sign Up";
+
+
+//New post
+//"classifiaction"="Select Book Clasifiaction";
+//"Name"="Book Name";
+//"location1"="Location";
+//"Quality"="Book Quality";
+//"contact"="Contacts";
+
+
+// new book
+"New"="Add Your Book";
+"title"="Title";
+"author"="Author";
+"country"="Country";
+"language"="Language";
+"page"="Pages";
+"year"="Year";
+"image"="Choose an image";
+"sub"="Submit";
+
+//home
+"home"="Home";
+
+//favorite
+"favorite"="Books you like";
+
+

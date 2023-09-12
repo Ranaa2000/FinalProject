@@ -35,7 +35,7 @@ struct HomeView: View {
             .toolbar(){ // <2>
                 ToolbarItem() { // <3>
                     HStack{
-                        Text("Home")
+                        Text("home")
                             .foregroundColor(.white)
                             .font(.system(size: 35))
                         

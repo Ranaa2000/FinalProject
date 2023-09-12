@@ -9,7 +9,7 @@ import SwiftUI
 
 struct textbuttun: View {
     var body: some View {
-        Text("Log In").frame(width: 300,height: 50).bold().foregroundColor(.black).background(Color.white).cornerRadius(20)
+        Text("log1").frame(width: 300,height: 50).bold().foregroundColor(.black).background(Color.white).cornerRadius(20)
     }
 }
 

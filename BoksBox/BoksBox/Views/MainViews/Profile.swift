@@ -44,7 +44,12 @@ struct Profile: View {
             VStack{
             ScrollView{
                 
-                VStack {
+                VStack {  Button(
+                    action: {
+                        Gwt().Token = ""
+                    }, label: {
+                        Image("Image").resizable().foregroundColor(.white).frame(width: 25,height: 35)
+                    })
                     VStack{
                         
                         //            Image(systemName: "globe")

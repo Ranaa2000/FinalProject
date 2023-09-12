@@ -14,17 +14,17 @@ struct LogInView: View {
     @State var Email: String = ""
     
     var body: some View {
-         VStack {
+        VStack {
             image()
             VStack {
                 TextField(text:$Email){
-                    Text("Email").foregroundColor(.white)
+                    Text("enter").foregroundColor(.white)
                 }
                 .padding(20).foregroundColor(.white).frame(width: 350,height: 50).background(Color.gray.opacity(0.6)).cornerRadius(10)
             }.padding(.bottom)
             VStack {
                 TextField(text:$Password){
-                    Text("Password").foregroundColor(.white)
+                    Text("pass").foregroundColor(.white)
                 }
                 .padding(20).foregroundColor(.white).frame(width: 350,height: 50).background(Color.gray.opacity(0.6)).cornerRadius(10)
             }.padding(.bottom)
@@ -39,10 +39,10 @@ struct LogInView: View {
                 .padding(.top,40)
             
             HStack{
-                Text("Don’t have an account? ").font(Font.headline).foregroundColor(.white).bold()
+                Text("have").font(Font.headline).foregroundColor(.white).bold()
                 NavigationLink( destination: SignUpView())
                 {
-                    Text("Sign Up").font(Font.system(size: 18)).bold()
+                    Text("sign1").font(Font.system(size: 18)).bold()
                 }
             }.padding(.top,40)
             HStack{

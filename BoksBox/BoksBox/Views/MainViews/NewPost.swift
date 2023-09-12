@@ -5,7 +5,7 @@
 //  addFinalProject
 //
 //  Created by TAHANI AL ONEAZAN on 31/08/2023.
-//
+
 
 import SwiftUI
 import UIKit
@@ -13,39 +13,34 @@ import UIKit
 var te:String = "choose an image"
 
 struct PlaceholderTextField: View {
-    
     var placeholder: String
     @Binding var text: String
     
     var body: some View {
-       
-     
-            ZStack(alignment: .leading) {
-                if text.isEmpty {
-                    Text(placeholder)
-                        .foregroundColor(.white.opacity(0.5))
-                        .padding(.horizontal, 16)
-                }
-                
-                TextField("", text: $text)
-                    .foregroundColor(.white)
-                    .padding(20)
-                    .frame(height: 65)
-                    .background(Color.clear)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 16)
-                            .stroke(Color.white, lineWidth: 2)
-                    )
+        ZStack(alignment: .leading) {
+            if text.isEmpty {
+                Text(placeholder)
+                    .foregroundColor(.white.opacity(0.5))
+                    .padding(.horizontal, 16)
             }
-        
+            
+            TextField("", text: $text)
+                .foregroundColor(.white)
+                .padding(20)
+                .frame(height: 65)
+                .background(Color.clear)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 16)
+                        .stroke(Color.white, lineWidth: 2)
+                )
+        }
     }
 }
 
 struct NewPost: View {
     @State private var selectedImage: UIImage?
     @State private var isShowingImagePicker = false
-    @State var pushpage: Bool = false
-    @State var rivechec: checRive?
+    
     @State private var pagesText = ""
     @State private var yearText = ""
     @State private var item: BookItem = BookItem()
@@ -56,15 +51,13 @@ struct NewPost: View {
     let bookQuality = ["Good Quality", "Medium Quality", "Low Quality"]
     
     var body: some View {
-        
-         
+        NavigationView{
             VStack{
-                rivechec
                 ScrollView{
                     VStack {
                         // Book Title
                         TextField(text: $item.title){
-                            Text("Title").foregroundColor(.white)
+                            Text("title").foregroundColor(.white)
                         }
                         .padding(20).foregroundColor(.white).frame(width: 380,height: 50)
                         .frame(height: 65)
@@ -77,7 +70,7 @@ struct NewPost: View {
                         
                         // Author
                         TextField(text:$item.author){
-                            Text("Author").foregroundColor(.white)
+                            Text("author").foregroundColor(.white)
                         }
                         .padding(20).foregroundColor(.white).frame(width: 380,height: 50)
                         .frame(height: 65)
@@ -90,7 +83,7 @@ struct NewPost: View {
 
                         // Country
                         TextField(text:$item.country){
-                            Text("Country").foregroundColor(.white)
+                            Text("country").foregroundColor(.white)
                         }
                         .padding(20).foregroundColor(.white).frame(width: 380,height: 50)
                         .frame(height: 65)
@@ -103,7 +96,7 @@ struct NewPost: View {
 
                         // Language
                         TextField(text:$item.language){
-                            Text("Language").foregroundColor(.white)
+                            Text("language").foregroundColor(.white)
                         }
                         .padding(20).foregroundColor(.white).frame(width: 380,height: 50)
                         .frame(height: 65)
@@ -116,7 +109,7 @@ struct NewPost: View {
                         
                         // pages
                         TextField(text: $pagesText){
-                            Text("Pages").foregroundColor(.white)
+                            Text("page").foregroundColor(.white)
                         }
                         .padding(20).foregroundColor(.white).frame(width: 380,height: 50)
                         .frame(height: 65)
@@ -129,7 +122,7 @@ struct NewPost: View {
                         
                         // year
                         TextField(text: $yearText){
-                            Text("Year").foregroundColor(.white)
+                            Text("year").foregroundColor(.white)
                         }
                         .padding(20).foregroundColor(.white).frame(width: 380,height: 50)
                         .frame(height: 65)
@@ -180,14 +173,14 @@ struct NewPost: View {
                         
                         Button(action: {
                             isShowingImagePicker = true
-                           
+                            te = ""
                         }) {
                             if isShowingImagePicker == false{
-                                Text("\(te)")
+                                Text("image")
                                 .foregroundColor(.white)}
                             else {
 
-                                Text("\(te)")
+                                Text("image")
                             }
                         }
                         .sheet(isPresented: $isShowingImagePicker) {
@@ -196,8 +189,7 @@ struct NewPost: View {
                         
                         Button(
                             action: {
-                                
-                                print("New post")
+                                print("New")
                                 let pages = Int(pagesText) ?? 1
                                 let year = Int(yearText) ?? 2020
                                 item.pages = pages
@@ -207,25 +199,13 @@ struct NewPost: View {
                                     bookItems.uploadImage(selectedImage: imageData, imageFileName: imageFileName)
                                     item.imageName = imageFileName
                                     bookItems.saveItem(item: item)
-                                    rivechec = checRive()
-                                    pushpage = true
-                                    
                                 } else {
                                     print("no image")
                                 }
-                            
                             },
                             label: {
-//                                NavigationLink {
-//                                    checRive()
-//                                } label: {
-                                    
-                                    
-                                    
-                                    Text("Submit")
-                                        .foregroundColor(.white)
-                               // }
-                            
+                                Text("sub")
+                                .foregroundColor(.white)
                             }
                         )
                         .padding()
@@ -255,16 +235,17 @@ struct NewPost: View {
             .toolbar(){ // <2>
                 ToolbarItem() { // <3>
                     HStack{
-                        Text("New Book")
+                        Text("New")
                             .foregroundColor(.white)
-                            .font(.system(size: 28))
+                            //.font(.system(size: 28))
+                            .font(Font.custom("Roboto-Regular", size: 26))
                         
                             .bold()
                     }.frame(width: 380)
                 }
             }
             
-        
+        }
     }
 }
 struct ImagePicker: UIViewControllerRepresentable {

@@ -45,6 +45,7 @@
 		3090DD702AA8C7800088C89E /* BoksBoxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3090DD6F2AA8C7800088C89E /* BoksBoxApp.swift */; };
 		3090DD742AA8C7820088C89E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3090DD732AA8C7820088C89E /* Assets.xcassets */; };
 		3090DD772AA8C7820088C89E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3090DD762AA8C7820088C89E /* Preview Assets.xcassets */; };
+		FA6F265F2AB0581600A25CF7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA6F26612AB0581600A25CF7 /* Localizable.strings */; };
 		FAFE77BB2AA9E20F00F81EA7 /* NewPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFE77BA2AA9E20F00F81EA7 /* NewPost.swift */; };
 		FAFE77BD2AA9E32100F81EA7 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFE77BC2AA9E32100F81EA7 /* Profile.swift */; };
 		FAFE77BF2AA9E36E00F81EA7 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFE77BE2AA9E36E00F81EA7 /* SettingView.swift */; };
@@ -83,6 +84,8 @@
 		3090DD6F2AA8C7800088C89E /* BoksBoxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoksBoxApp.swift; sourceTree = "<group>"; };
 		3090DD732AA8C7820088C89E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3090DD762AA8C7820088C89E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FA6F26602AB0581600A25CF7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FA6F26622AB0582800A25CF7 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FAFE77BA2AA9E20F00F81EA7 /* NewPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPost.swift; sourceTree = "<group>"; };
 		FAFE77BC2AA9E32100F81EA7 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		FAFE77BE2AA9E36E00F81EA7 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
@@ -214,6 +217,7 @@
 				305371902AA909A200C4DA01 /* Views */,
 				3090DD732AA8C7820088C89E /* Assets.xcassets */,
 				3090DD6F2AA8C7800088C89E /* BoksBoxApp.swift */,
+				FA6F26612AB0581600A25CF7 /* Localizable.strings */,
 				3090DD752AA8C7820088C89E /* Preview Content */,
 			);
 			path = BoksBox;
@@ -278,6 +282,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = 3090DD632AA8C7800088C89E;
 			packageReferences = (
@@ -301,6 +306,7 @@
 				2B4EEC692AABA1BD00169F2B /* GoogleService-Info.plist in Resources */,
 				3090DD772AA8C7820088C89E /* Preview Assets.xcassets in Resources */,
 				3090DD742AA8C7820088C89E /* Assets.xcassets in Resources */,
+				FA6F265F2AB0581600A25CF7 /* Localizable.strings in Resources */,
 				305371A42AAE49AC00C4DA01 /* 327-628-checkmark-simple.riv in Resources */,
 				3053719F2AADB00D00C4DA01 /* 113-173-loading-book.riv in Resources */,
 				305371AA2AAF008700C4DA01 /* 1247-2400-check-icon.riv in Resources */,
@@ -347,11 +353,24 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		FA6F26612AB0581600A25CF7 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA6F26602AB0581600A25CF7 /* en */,
+				FA6F26622AB0582800A25CF7 /* ar */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		3090DD782AA8C7820088C89E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -412,6 +431,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
