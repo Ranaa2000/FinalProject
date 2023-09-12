@@ -58,23 +58,24 @@ struct FavoriteView: View {
                 startPoint: UnitPoint(x: 0.5, y: 0),
                 endPoint: UnitPoint(x: 0.5, y: 1)
             )).edgesIgnoringSafeArea(.all)
-                .toolbar { // <2>
-                    ToolbarItem() { // <3>
-                        HStack{
-                            
-                            Text("Favorite")
-                                .foregroundColor(.white)
-                                .font(.system(size: 40))
-                                .bold()
-                            
-                            
-                            
-                            
-                        }.frame(width: 380)
-                        
-                    }
-                }
-        
+//                .toolbar { // <2>
+//                    ToolbarItem() { // <3>
+//                        HStack{
+//
+//                            Text("Favorite")
+//                                .foregroundColor(.white)
+//                                .font(.system(size: 40))
+//                                .bold()
+//
+//
+//
+//
+//                        }.frame(width: 380)
+//
+//                    }
+//                }
+            .navigationTitle("Favorite")
+//            .navigationBarTitleDisplayMode(.)
         
     }
     

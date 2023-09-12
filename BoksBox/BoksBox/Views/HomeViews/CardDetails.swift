@@ -16,7 +16,7 @@ struct CardDetails: View {
     @State var icon: String = "heart"
     @State var coloricon: Color = .black
     @State var imageUrl: URL = URL(string: "https://placehold.co/400")!
-    @State var con: Int = 0
+    @State var isFavorited: Bool = false
     var body: some View {
         VStack{
             NavigationLink {
@@ -52,17 +52,31 @@ struct CardDetails: View {
                         .frame(width: 104)
                         Button(action: {
                              
-                          if con == 0
-                            {
-                          
-                                coloricon = .red
-                                icon = "heart.fill"
-                                vm.vm(newbook: item)
-                                
-                          }
-                            con += 1
+                            if isFavorited {
+                                // remove
+                                print("Removing", item.title)
+                                vm.arr.removeAll(where: { $0.id == item.id })
+                            } else {
+                                // add
+                                print("Adding", item.title)
+                                vm.arr.append(item)
+                            }
+                            
+                            isFavorited.toggle()
+//                          if con == 0
+//                            {
+//
+//                                coloricon = .red
+//                                icon = "heart.fill"
+//                                vm.vm(newbook: item)
+//
+//                          }
+//                            con += 1
                         }, label: {
-                            Image(systemName: icon).resizable().frame(width: 25,height: 23).foregroundColor(coloricon)
+                            Image(systemName: isFavorited ? "heart.fill" : "heart")
+                                .resizable()
+                                .frame(width: 25,height: 23)
+                                .foregroundColor(isFavorited ? .red : .black)
                         })
                     }
                     .padding(.bottom, 10)
@@ -85,6 +99,8 @@ struct CardDetails: View {
                     imageUrl = url
                 }
             }
+            
+            isFavorited = vm.arr.contains(where: { $0.id == item.id })
         }
     }
 }
