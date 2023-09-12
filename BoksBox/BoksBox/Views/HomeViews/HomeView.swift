@@ -4,19 +4,91 @@
 //
 //  Created by Rana MHD on 18/02/1445 AH.
 //
-
 import SwiftUI
+import FirebaseDatabase
 
 struct HomeView: View {
-
+   // @ObservedObject var BookItemsViewModel1 = BookItemsViewModel()
+    @EnvironmentObject var  BookItemsViewModel1 : BookItemsViewModel
+    @State var Searched : String = ""
+    @State var  filtterCard : Array<BookItem> = []
+    
+    @EnvironmentObject var vm: Vm
+    @EnvironmentObject var bookItems: BookItemsViewModel
+    let ref = Database.database().reference(withPath: "books")
+    @State var refObservers: [DatabaseHandle] = []
+    
+    let columns = [
+        GridItem(.flexible()),
+        GridItem(.flexible())
+    ]
     var body: some View {
        
             VStack{
-                // to view books
-                ScrollView{
-                    ListOfCards()
+                HStack{
+ 
+                    Image(systemName: "magnifyingglass")
+                        .foregroundColor(Color.white)
+                    TextField("Search", text: $Searched)
+                   // (Searched.isEmpty ? .white.opacity(0.5) : .white)
+                        .foregroundColor(Color.white)
                 }
-                .padding(.top, 150)
+                .frame(width: 350 )
+                .padding()
+                .overlay(
+                    RoundedRectangle(cornerRadius: 16)
+                        .stroke(Color.white, lineWidth: 2)
+                )
+
+                
+//                ScrollView{
+//                    ListOfCards()
+//                } .padding(.top, 150)
+//                // to view books
+                if Searched.isEmpty{
+                    ScrollView{
+                        ListOfCards()
+                    } .padding(.top)
+                }else{
+                    ScrollView(){
+                        LazyVGrid(columns: columns, spacing: 10) {
+                            ForEach(filtterCard, id: \.self) { item in
+                                CardDetails(item: item)
+                            }
+                        }
+                        .padding(.horizontal)
+                    }
+                    .onAppear() {
+                        if !bookItems.loaded {
+                            let completed = ref
+                                .observe(.value) { snapshot in
+                                    var newItems: [BookItem] = []
+                                    for child in snapshot.children {
+                                        if
+                                            let snapshot = child as? DataSnapshot,
+                                            let bookItem = BookItem(snapshot: snapshot) {
+                                            newItems.append(bookItem)
+                                        }
+                                    }
+                                    bookItems.items = newItems
+                                    bookItems.loaded = true
+                                }
+                            refObservers.append(completed)
+                        }
+                    }
+                    }
+                }
+               
+                
+
+            
+            .onAppear{
+                filtterCard = BookItemsViewModel1.items
+                
+            }
+            .onChange(of: Searched) { newVlue in
+                
+                filtterCardBasedOn(newVlue)
             }
             
             // background color
@@ -31,22 +103,26 @@ struct HomeView: View {
                     endPoint: UnitPoint(x: 0.5, y: 1)
                 )
             )
-            .edgesIgnoringSafeArea(.all)
+           // .edgesIgnoringSafeArea(.all)
             .toolbar(){ // <2>
                 ToolbarItem() { // <3>
                     HStack{
-                        Text("home")
-                            .foregroundColor(.white)
-                            .font(.system(size: 35))
-                        
-                            .bold()
+                       
                         
                     }.frame(width: 380)
                     
                     
                 }
             }
-        
-        
+    }
+    func filtterCardBasedOn(_ value: String){
+        if value.isEmpty{
+            filtterCard = BookItemsViewModel1.items
+        }else{
+            let lowercase = value.lowercased()
+            filtterCard = BookItemsViewModel1.items.filter({
+                card in return card.title.lowercased().contains(lowercase)
+            })
+        }
     }
 }
