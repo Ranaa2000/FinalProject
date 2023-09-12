@@ -10,7 +10,7 @@ import SwiftUI
 struct ShowDetailsView: View {
     var description: String 
     var bookType : String
-   
+    var items :BookItem
    
     var Bookname:String
     var image: URL
@@ -38,8 +38,10 @@ struct ShowDetailsView: View {
         
         //            }
         //        }
-        //
-        VStack(){
+       
+        VStack{
+            ScrollView{
+                
             
             HStack{
                 
@@ -56,7 +58,9 @@ struct ShowDetailsView: View {
                         }
                     )
                 }.frame( width: 180,height: 250).background(Color.gray.opacity(0.3)).cornerRadius(10).padding()
-                            
+                     
+                
+                
                     
                 VStack{
                     Text(Bookname)
@@ -68,64 +72,82 @@ struct ShowDetailsView: View {
                         )
                        
                         .foregroundColor(.white)
-                        .frame(width: 180, height: 65, alignment: .topLeading)
+                        .frame(width: 180, height: 45, alignment: .topLeading)
                     
                     
-                    Text(bookType)
                     
-                        .foregroundColor(.white)
+//                    Text("Year : ")   .foregroundColor(.white)
+//                        .font(
+//                            Font.custom("Crimson Text", size: 20)
+//                                .weight(.bold)
+//                        )
+//                        .frame(width: 180, height: 25, alignment: .topLeading)
+//
+//
+//                    Text("\(items.year)")
+//
+//                        .foregroundColor(.white)
+//                        .font(
+//                            Font.custom("Crimson Text", size: 20)
+//
+//                        )
+//                        .frame(width: 180, height: 35, alignment: .topLeading)
+//
+//
+                    
+                    Text("Author : ")   .foregroundColor(.white)
                         .font(
                             Font.custom("Crimson Text", size: 20)
                                 .weight(.bold)
                         )
-                        .frame(width: 180, height: 65, alignment: .topLeading)
+                        .frame(width: 180, height: 25, alignment: .topLeading)
                     
-                    Text("Riyadh")
+                    
+                    Text(items.author)
+                    
                         .foregroundColor(.white)
                         .font(
                             Font.custom("Crimson Text", size: 20)
-                                .weight(.bold)
+                               
                         )
-                        .frame(width: 180, height: 65, alignment: .topLeading)
+                        .frame(width: 180, height: 35, alignment: .topLeading)
+                    
+                    
+                    
+                    
+                    
+                   
+                   
+                    
+                    Text("Language : ")
+                        .foregroundColor(.white)
+                        .font(
+                            Font.system(size: 20)
+                                .bold()
+                        )
+                        .frame(width: 180, height: 25, alignment: .topLeading)
+                    Text(items.language)
+                        .foregroundColor(.white)
+                        .font(
+                            Font.system(size: 19)
+                                
+                        )
+                        .frame(width: 180, height: 35, alignment: .topLeading)
+                 
+                    
                 }
-            }.frame(width: 390, height: 300)
-            
-            
-            Text("Book Details")
-                .bold()
-                .foregroundColor(.white)
-                .padding(.top, 2)
-                .font(
-                    Font.custom("Crimson Text", size: 25)
-                        .weight(.bold)
-                )
-                .foregroundColor(.white)
-                .frame(width: 300, height: 65, alignment: .topLeading)
-            
-            
-            Text("Here the description Here the descriptionHere the descriptionHere the descriptionHere the descriptionHere the descriptionHere the description ! ")
-                .foregroundColor(.white)
-                .frame(width: 300, height: 65, alignment: .topLeading)
-            
-            VStack{
-            
-                Text("Comunication : ")
-                    .foregroundColor(.white)
-                    .padding(.top, 2)
-                    .font(
-                        Font.custom("Crimson Text", size: 20)
-                            .weight(.bold)
-                    )
-                    .frame(width: 300, height: 65, alignment: .bottomLeading)
                 
-                Text("Phone : 055555555")
-                    .foregroundColor(.white)
-                    .frame(width: 300, height: 65, alignment: .bottomLeading)
+            }.frame(width: 390)
+              
                 
                 
-            }.frame(width: 300, height: 130, alignment: .bottomLeading).padding(.top,100)
-        }
-        .frame(maxWidth: .infinity , maxHeight: .infinity)
+                
+                
+                
+                
+                ExtractedView(items: items)
+        }.padding(.top,90).padding(.bottom,40)
+        
         .background(
             LinearGradient(
                 stops: [
@@ -137,7 +159,123 @@ struct ShowDetailsView: View {
             )
         )
         .edgesIgnoringSafeArea(.all)
-    }
+    }}
 }
 
 
+
+struct ExtractedView: View {
+    var items:BookItem
+    var body: some View {
+        VStack{
+            
+            VStack{
+                
+                Text("Book Details")
+                    .bold()
+                    .foregroundColor(.white)
+                 
+                    .font(
+                        Font.custom("Crimson Text", size: 25)
+                            .weight(.bold)
+                    )
+                    .foregroundColor(.white)
+                    .frame(maxWidth: .infinity,maxHeight:  .infinity,alignment: .leading)
+                
+                
+                
+                Text("Here the description Here the descriptionHere the descriptionHere the descriptionHere the descriptionHere the descriptionHere the description ! ")
+                    .foregroundColor(.white)
+                 
+                
+            }.frame(maxWidth: .infinity,maxHeight:  .infinity,alignment: .leading).padding(.bottom , 20)
+            
+            HStack{
+                Text("Country : ")
+                    .foregroundColor(.white)
+                    .font(
+                        Font.system(size: 20)
+                        
+                    ).bold()
+                    
+                Text(items.country)
+                
+                    .foregroundColor(.white)
+                    .font(
+                        Font.system(size: 19)
+                        
+                    )
+                    
+            }.frame(maxWidth: .infinity,maxHeight:  .infinity,alignment: .leading).padding(.bottom , 20)
+            
+            HStack{
+                HStack{
+                    Text("Year : ")
+                        .foregroundColor(.white)
+                        .font(
+                            Font.system(size: 20)
+                            
+                        ).bold()
+                        
+                    Text("\(items.year)")
+                    
+                        .foregroundColor(.white)
+                        .font(
+                            Font.system(size: 19)
+                            
+                        )
+                } .frame(maxWidth: .infinity,maxHeight:  .infinity,alignment: .leading).padding(.trailing)
+                
+                HStack{
+                    Text("Pages : ")
+                        .foregroundColor(.white)
+                        .font(
+                            Font.system(size: 20)
+                            
+                        ).bold()
+                        
+                    Text("\(items.pages)")
+                    
+                        .foregroundColor(.white)
+                        .font(
+                            Font.system(size: 19)
+                            
+                        )
+                      
+                }.frame(maxWidth: .infinity,maxHeight:  .infinity,alignment: .leading).padding(.leading )
+            }.frame(maxWidth: .infinity,maxHeight:  .infinity,alignment: .leading).padding(.bottom , 20)
+            
+ 
+            
+            VStack{
+                Text("Link : ").frame(maxWidth: .infinity,maxHeight:  .infinity,alignment: .leading)   .foregroundColor(.white)
+                    .font(
+                        Font.system(size: 20)
+                        
+                    ).bold()
+                    
+                
+                Text(items.link)
+                
+                    .foregroundColor(.white)
+                    .font(
+                        Font.custom("Crimson Text", size: 19)
+                            .weight(.bold))
+            }.frame(maxWidth: .infinity,maxHeight:  .infinity,alignment: .leading).padding(.bottom ,20)
+            VStack{
+                
+                Text("Comunication : ")
+                    .foregroundColor(.white)
+                    .font(
+                        Font.system(size: 20)
+                            .bold()
+                    ).padding(.bottom )
+                    
+                Text("Phone : 055555555")
+                    .foregroundColor(.white)
+                   
+            }.frame(maxWidth: .infinity,maxHeight:  .infinity,alignment: .leading).padding(.bottom , 20)
+            
+        }.padding(.horizontal,20)
+    }
+}

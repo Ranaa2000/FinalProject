@@ -33,10 +33,11 @@ struct HomeView: View {
                    // (Searched.isEmpty ? .white.opacity(0.5) : .white)
                         .foregroundColor(Color.white)
                 }
-                .frame(width: 350 )
-                .padding()
+                .frame(width: 330 )
+                .padding(.vertical,6)
+                .padding(.horizontal,16)
                 .overlay(
-                    RoundedRectangle(cornerRadius: 16)
+                    RoundedRectangle(cornerRadius: 20)
                         .stroke(Color.white, lineWidth: 2)
                 )
 

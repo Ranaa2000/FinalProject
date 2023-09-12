@@ -24,7 +24,7 @@ import FirebaseStorage
         var body: some View {
             VStack{
                 NavigationLink {
-                    ShowDetailsView(description: item.author, bookType: item.country, Bookname: item.title, image: imageUrl)
+                    ShowDetailsView(description: item.author, bookType: item.country, items: item, Bookname: item.title, image: imageUrl)
                 } label: {
                     VStack {
                         VStack{
