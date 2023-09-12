@@ -9,6 +9,7 @@
 
 import SwiftUI
 import UIKit
+import FirebaseAuth
 
 var te:String = "choose an image"
 
@@ -40,9 +41,9 @@ struct PlaceholderTextField: View {
 struct NewPost: View {
     @State private var selectedImage: UIImage?
     @State private var isShowingImagePicker = false
-    
     @State private var pagesText = ""
     @State private var yearText = ""
+    @State private var uid = ""
     @State private var item: BookItem = BookItem()
     @EnvironmentObject var bookItems: BookItemsViewModel
     
@@ -80,7 +81,7 @@ struct NewPost: View {
                                 .stroke(Color.white, lineWidth: 2)
                         )
                         .padding()
-
+                        
                         // Country
                         TextField(text:$item.country){
                             Text("country").foregroundColor(.white)
@@ -93,7 +94,7 @@ struct NewPost: View {
                                 .stroke(Color.white, lineWidth: 2)
                         )
                         .padding()
-
+                        
                         // Language
                         TextField(text:$item.language){
                             Text("language").foregroundColor(.white)
@@ -120,6 +121,18 @@ struct NewPost: View {
                         )
                         .padding()
                         
+                        TextField(text: $item.mobileNumber){
+                            Text("Mobile Number").foregroundColor(.white)
+                        }
+                        .padding(20).foregroundColor(.white).frame(width: 380,height: 50)
+                        .frame(height: 65)
+                        .background(Color.clear)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 16)
+                                .stroke(Color.white, lineWidth: 2)
+                        )
+                        .padding()
+                        
                         // year
                         TextField(text: $yearText){
                             Text("year").foregroundColor(.white)
@@ -132,34 +145,6 @@ struct NewPost: View {
                                 .stroke(Color.white, lineWidth: 2)
                         )
                         .padding()
-                        
-//                        Menu {
-//                            ForEach(bookClassifications, id: \.self) { classification in
-//                                Button(action: {
-//                                    self.textField1 = classification
-//                                }) {
-//                                    Text(classification)
-//                                        .foregroundColor(.white)
-//                                }
-//                            }
-//                        } label: {
-//                            HStack {
-//                                Text("Select Book Classification")
-//                                    .foregroundColor(textField1.isEmpty ? .white.opacity(0.5) : .white)
-//                                    .padding(.horizontal, 16)
-//                                Spacer()
-//                                Image(systemName: "chevron.down")
-//                                    .foregroundColor(.white)
-//                            }
-//                        }
-//                        .padding()
-//                        .frame(width: 380,height: 50)
-//                        .frame(height: 65)
-//                        .background(
-//                            RoundedRectangle(cornerRadius: 16)
-//                                .stroke(Color.white, lineWidth: 2)
-//                        )
-                        
                         
                         if let image = selectedImage {
                             Image(uiImage: image)
@@ -179,7 +164,7 @@ struct NewPost: View {
                                 Text("image")
                                 .foregroundColor(.white)}
                             else {
-
+                                
                                 Text("image")
                             }
                         }
@@ -194,6 +179,8 @@ struct NewPost: View {
                                 let year = Int(yearText) ?? 2020
                                 item.pages = pages
                                 item.year = year
+                                item.uid = uid
+                                
                                 let imageFileName = "\(UUID().uuidString).jpg"
                                 if let imageData = selectedImage {
                                     bookItems.uploadImage(selectedImage: imageData, imageFileName: imageFileName)
@@ -205,7 +192,7 @@ struct NewPost: View {
                             },
                             label: {
                                 Text("sub")
-                                .foregroundColor(.white)
+                                    .foregroundColor(.white)
                             }
                         )
                         .padding()
@@ -237,14 +224,19 @@ struct NewPost: View {
                     HStack{
                         Text("New")
                             .foregroundColor(.white)
-                            //.font(.system(size: 28))
+                        //.font(.system(size: 28))
                             .font(Font.custom("Roboto-Regular", size: 26))
                         
                             .bold()
                     }.frame(width: 380)
                 }
             }
-            
+            .onAppear() {
+                let user = Auth.auth().currentUser
+                if let user = user {
+                    uid = user.uid
+                }
+            }
         }
     }
 }

@@ -6,14 +6,8 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
-struct GridItemData: Identifiable {
-    let id = UUID()
-    let imageName: String
-    let text1: String
-    let text2: String
-    let text3: String
-}
 struct TextBox: View {
     let text: String
     
@@ -25,20 +19,18 @@ struct TextBox: View {
     }
 }
 struct Profile: View {
+    @EnvironmentObject var bookItems: BookItemsViewModel
     @State private var isMenuVisible = false
-    private let items = [
-        GridItemData(imageName: "absalom-absalom", text1: "1", text2: "1", text3: "Riyadh"),
-        GridItemData(imageName: "anna-karenina", text1: "2", text2: "2", text3: "Riyadh"),
-        GridItemData(imageName: "beloved", text1: "3", text2: "3", text3: "Riyadh"),
-        GridItemData(imageName: "bostan", text1: "4", text2: "4", text3: "Riyadh"),
-        GridItemData(imageName: "ficciones", text1: "5", text2: "5", text3: "Riyadh")
-    ]
     
     private let gridLayout = [
         GridItem(.flexible(), spacing: 16),
         GridItem(.flexible(), spacing: 16)
     ]
     
+    @State private var uid: String = ""
+    @State private var username: String = ""
+    @State private var profileImage: URL = URL(fileURLWithPath: "")
+
     var body: some View {
         
             VStack{
@@ -68,22 +60,13 @@ struct Profile: View {
                         //.padding()
                         // Spacer()
                         HStack  {
-                            Button(action: {
-                                print("waleed")
-                            }, label: {
-                                Image(systemName: "pencil")
-                                    .resizable()
-                                    .frame(width: 22,height: 25)
-                                    .foregroundColor(.white)
-                            })
-                            Text("User Name")
+                            Text("Welcome \(username)")
                                 .foregroundColor(.white)
-                                .font(.system(size: 30))
+                                .font(.system(size: 18))
                                 .bold()
-                            
                         }
                         Spacer(minLength: 40)
-                        Text("My Advertisements")
+                        Text("My Books")
                             .foregroundColor(.white)
                             .font(.system(size: 30))
                             .bold()
@@ -93,17 +76,10 @@ struct Profile: View {
                     }
                     
                     LazyVGrid(columns: gridLayout, spacing: 16) {
-                        ForEach(items) { item in
-                            VStack(spacing: 8) {
-                                Image(item.imageName)
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .cornerRadius(8)
-                                
-                                TextBox(text: item.text1)
-                                TextBox(text: item.text2)
-                                TextBox(text: item.text3)
-                            }
+                        ForEach(bookItems.items.filter({
+                            item in return item.uid == uid
+                        })) { item in
+                            CardDetails(item: item)
                         }
                     }
                     .padding()
@@ -175,7 +151,20 @@ struct Profile: View {
                     endPoint: UnitPoint(x: 0.5, y: 1)
                 )
             ))
-            
+            .onAppear() {
+                let user = Auth.auth().currentUser
+                if let user = user {
+                    uid = user.uid
+                    
+                    if let email = user.email {
+                        username = email
+                    }
+                    
+                    if let photoURL = user.photoURL {
+                        profileImage = photoURL
+                    }
+                }
+            }
         
     }
 }

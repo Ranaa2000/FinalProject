@@ -9,7 +9,7 @@ import Foundation
 import FirebaseDatabase
 
 // MARK: Book Item definition according to firebase database
-struct BookItem: Hashable {
+struct BookItem: Hashable, Identifiable {
     let id = UUID()
     let ref: DatabaseReference?
     var author: String
@@ -20,6 +20,8 @@ struct BookItem: Hashable {
     var pages: Int
     var title: String
     var year: Int
+    var mobileNumber: String = ""
+    var uid: String = ""
 
     // json key to object attribute mapping
     var dictionary: [String: Any] {
@@ -31,7 +33,9 @@ struct BookItem: Hashable {
             "link": link,
             "pages": pages,
             "title": title,
-            "year": year
+            "year": year,
+            "mobileNumber": mobileNumber,
+            "uid": uid
         ]
     }
     
@@ -45,7 +49,9 @@ struct BookItem: Hashable {
         self.link = ""
         self.pages = 0
         self.title = ""
-        self.year = 1990
+        self.year = 1988
+        self.mobileNumber = "0555555555"
+        self.uid = "0"
     }
     
     // MARK: To initialize Book Item object from JSON string
@@ -70,6 +76,12 @@ struct BookItem: Hashable {
         self.pages = pages
         self.title = title
         self.year = year
+        if let mobileNumber = value["mobileNumber"] as? String {
+            self.mobileNumber = mobileNumber
+        }
+        if let uid = value["uid"] as? String {
+            self.uid = uid
+        }
     }
 
     // MARK: Convert BookItem to JSON string
@@ -82,7 +94,9 @@ struct BookItem: Hashable {
         "link": link,
         "pages": pages,
         "title": title,
-        "year": year
+        "year": year,
+        "mobileNumber": mobileNumber,
+        "uid": uid
       ]
     }
 }
