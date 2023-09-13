@@ -31,29 +31,30 @@ struct SignUpView: View {
                     .padding(20).foregroundColor(.white).frame(width: 350,height: 50).background(Color.gray.opacity(0.6)).cornerRadius(10)
                 }.padding(.bottom)
                 VStack {
+                    TextField(text:$Username){
+                        Text("user").foregroundColor(.white)
+                    }
+                    .padding(20).foregroundColor(.white).frame(width: 350,height: 50).background(Color.gray.opacity(0.6)).cornerRadius(10)
+                }.padding(.bottom)
+                VStack {
                     TextField(text:$Email){
                         Text("email").foregroundColor(.white)
                     }
                     .padding(20).foregroundColor(.white).frame(width: 350,height: 50).background(Color.gray.opacity(0.6)).cornerRadius(10)
                 }.padding(.bottom)
                 VStack {
-                    TextField(text:$Password){
+                    SecureField(text:$Password){
                         Text("password").foregroundColor(.white)
                     }
                     .padding(20).foregroundColor(.white).frame(width: 350,height: 50).background(Color.gray.opacity(0.6)).cornerRadius(10)
                 }.padding(.bottom)
                 VStack {
-                    TextField(text:$PasswordCorint){
+                    SecureField(text:$PasswordCorint){
                         Text("passwod1").foregroundColor(.white)
                     }
                     .padding(20).foregroundColor(.white).frame(width: 350,height: 50).background(Color.gray.opacity(0.6)).cornerRadius(10)
                 }.padding(.bottom)
-                VStack {
-                    TextField(text:$Username){
-                        Text("user").foregroundColor(.white)
-                    }
-                    .padding(20).foregroundColor(.white).frame(width: 350,height: 50).background(Color.gray.opacity(0.6)).cornerRadius(10)
-                }.padding(.bottom)
+              
                 
 //                TextField("aa", text: $Password)
 //                    .background(Color.red)
