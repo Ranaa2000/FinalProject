@@ -42,6 +42,8 @@ struct NewPost: View {
     @State private var selectedImage: UIImage?
     @State private var isShowingImagePicker = false
     @State private var pagesText = ""
+    @State var pushpage: Bool = false
+    @State var rivechec: checRive?
     @State private var yearText = ""
     @State private var uid = ""
     @State private var item: BookItem = BookItem()
@@ -54,8 +56,10 @@ struct NewPost: View {
     var body: some View {
         NavigationView{
             VStack{
+                rivechec
                 ScrollView{
                     VStack {
+                        
                         // Book Title
                         TextField(text: $item.title){
                             Text("title").foregroundColor(.white)
@@ -186,6 +190,8 @@ struct NewPost: View {
                                     bookItems.uploadImage(selectedImage: imageData, imageFileName: imageFileName)
                                     item.imageName = imageFileName
                                     bookItems.saveItem(item: item)
+                                    pushpage = true
+                                    rivechec = checRive()
                                 } else {
                                     print("no image")
                                 }
