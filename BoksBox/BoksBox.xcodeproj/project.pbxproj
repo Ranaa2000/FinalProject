@@ -16,6 +16,7 @@
 		2B4EEC692AABA1BD00169F2B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2B4EEC682AABA1BD00169F2B /* GoogleService-Info.plist */; };
 		2B4EEC6B2AABBBE600169F2B /* BookItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4EEC6A2AABBBE600169F2B /* BookItemModel.swift */; };
 		2B5475462AACA98200CA1A72 /* BookItemsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5475452AACA98200CA1A72 /* BookItemsViewModel.swift */; };
+		2B7135552AB2DAE1003CAF80 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7135542AB2DAE1003CAF80 /* SplashView.swift */; };
 		2BD2364C2AACCC0100E29EAB /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD2364B2AACCC0100E29EAB /* SearchView.swift */; };
 		305371962AA90C5400C4DA01 /* vm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305371952AA90C5400C4DA01 /* vm.swift */; };
 		305371982AA9B7E600C4DA01 /* Cardfev.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305371972AA9B7E600C4DA01 /* Cardfev.swift */; };
@@ -55,6 +56,7 @@
 		2B4EEC682AABA1BD00169F2B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2B4EEC6A2AABBBE600169F2B /* BookItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookItemModel.swift; sourceTree = "<group>"; };
 		2B5475452AACA98200CA1A72 /* BookItemsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookItemsViewModel.swift; sourceTree = "<group>"; };
+		2B7135542AB2DAE1003CAF80 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SplashView.swift; path = "../../../../../../.Trash/FinalProject 9.05.24 AM/BoksBox/BoksBox/Views/MainViews/SplashView.swift"; sourceTree = "<group>"; };
 		2BD2364B2AACCC0100E29EAB /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		305371952AA90C5400C4DA01 /* vm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vm.swift; sourceTree = "<group>"; };
 		305371972AA9B7E600C4DA01 /* Cardfev.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cardfev.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				3074986E2AA8F902006C6E43 /* WelcomeView.swift */,
 				3074987E2AA8F902006C6E43 /* Fivoret.swift */,
 				307498732AA8F902006C6E43 /* TabView.swift */,
+				2B7135542AB2DAE1003CAF80 /* SplashView.swift */,
 				2BD2364B2AACCC0100E29EAB /* SearchView.swift */,
 				FAFE77BA2AA9E20F00F81EA7 /* NewPost.swift */,
 				305371C72AAF69C300C4DA01 /* SwiftUIView.swift */,
@@ -346,6 +349,7 @@
 				3074988E2AA8F903006C6E43 /* textbuttum.swift in Sources */,
 				307498852AA8F903006C6E43 /* TabView.swift in Sources */,
 				FAFE77BB2AA9E20F00F81EA7 /* NewPost.swift in Sources */,
+				2B7135552AB2DAE1003CAF80 /* SplashView.swift in Sources */,
 				3053719A2AA9C2FE00C4DA01 /* ShicToken.swift in Sources */,
 				307498802AA8F902006C6E43 /* WelcomeView.swift in Sources */,
 			);

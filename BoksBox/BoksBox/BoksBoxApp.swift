@@ -30,7 +30,7 @@ struct BoksBoxApp: App {
         WindowGroup {
             NavigationView{
                 
-               WelcomeView()
+              SplashView()
                     .environmentObject(vm)
                     .environmentObject(bookItems)
             }
