@@ -158,7 +158,7 @@ struct Profile: View {
                             }
                         }
                         HStack  {
-                            Text("Welcome \(username)")
+                            Text("Welcome \(Gwt().Username)")
                                 .foregroundColor(.white)
                                 .font(.system(size: 18))
                                 .bold()

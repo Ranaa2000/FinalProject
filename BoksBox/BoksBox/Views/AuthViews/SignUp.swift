@@ -17,7 +17,7 @@ struct SignUpView: View {
     @State var Email: String = ""
     @State var Password: String = ""
     @State var PasswordCorint: String = ""
-    @State var Username: String = ""
+    
     var f : String = "Enter your username/Gmail"
     var body: some View {
       
@@ -31,7 +31,7 @@ struct SignUpView: View {
                     .padding(20).foregroundColor(.white).frame(width: 350,height: 50).background(Color.gray.opacity(0.6)).cornerRadius(10)
                 }.padding(.bottom)
                 VStack {
-                    TextField(text:$Username){
+                    TextField(text:Gwt().$Username){
                         Text("user").foregroundColor(.white)
                     }
                     .padding(20).foregroundColor(.white).frame(width: 350,height: 50).background(Color.gray.opacity(0.6)).cornerRadius(10)
@@ -125,7 +125,7 @@ struct SignUpView: View {
 
 struct SignUpView_Previews: PreviewProvider {
     static var previews: some View {
-        SignUpView(Enteryourname: "", Email: "",Password: "",PasswordCorint: "",Username: "")
+        SignUpView(Enteryourname: "", Email: "",Password: "",PasswordCorint: "")
     }
 }
 

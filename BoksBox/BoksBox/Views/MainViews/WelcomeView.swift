@@ -31,9 +31,9 @@ struct WelcomeView: View {
                         Spacer()
                         
                         NavigationLink {
-                            SheckTheToken()
+                            SheckTheToken().navigationBarBackButtonHidden(true) 
                         } label: {
-                            Text("Get Starts").font(Font.system(size: 35)).bold().foregroundColor(Color(red: 0.06, green: 0.19, blue: 0.34)).frame(width: 350,height: 65).background(Color(hue: 1.0, saturation: 0.01, brightness: 0.839).gradient).cornerRadius(20)
+                            Text("Get Starts").font(Font.system(size: 25)).bold().foregroundColor(Color(red: 0.06, green: 0.19, blue: 0.34)).frame(width: 350,height: 65).background(Color(hue: 1.0, saturation: 0.01, brightness: 0.839).gradient).cornerRadius(20)
                         }.padding(.bottom,5)
                     }
                 }

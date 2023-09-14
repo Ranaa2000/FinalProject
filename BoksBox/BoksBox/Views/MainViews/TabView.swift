@@ -19,7 +19,7 @@ struct TabdView: View {
                 .toolbarBackground(Color("blueC") ,for: .tabBar)
             SearchView()
                 .tabItem {
-                    Label("Search", systemImage: "magnifyingglass")
+                    Label("Ask Me", image:"")
                 }
                 .toolbar(.visible, for: .tabBar)
                 .toolbarBackground(Color("blueC") ,for: .tabBar)

@@ -76,7 +76,7 @@ struct CardDetails: View {
                             Image(systemName: isFavorited ? "heart.fill" : "heart")
                                 .resizable()
                                 .frame(width: 25,height: 23)
-                                .foregroundColor(isFavorited ? .red : .black)
+                                .foregroundColor(isFavorited  ? .red : .black)
                         })
                     }
                     .padding(.bottom, 10)

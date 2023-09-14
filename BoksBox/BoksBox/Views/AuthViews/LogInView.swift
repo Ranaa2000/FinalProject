@@ -40,7 +40,7 @@ struct LogInView: View {
             
             HStack{
                 Text("have").font(Font.headline).foregroundColor(.white).bold()
-                NavigationLink( destination: SignUpView())
+                NavigationLink( destination: SignUpView() )
                 {
                     Text("sign1").font(Font.system(size: 18)).bold()
                 }
